@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capital Topologies - Analytical Frameworks for Complex Systems</title>
+  <meta name="description" content="Mapping value transformation across complex systems">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Full-screen hero */
+    .hero-fullscreen {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #050810 0%, #0a0e1a 50%, #060a12 100%);
+      position: relative;
+      overflow: hidden;
+      padding: 2rem;
+    }
+
+    /* Subtle background pattern */
+    .hero-fullscreen::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 30%, rgba(60, 90, 140, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(80, 120, 180, 0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    /* Top navigation bar */
+    .top-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 1.5rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(10, 10, 10, 0.8);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .top-nav-logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #ffffff;
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+
+    .top-nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .top-nav-link {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    .top-nav-link:hover {
+      color: #ffffff;
+    }
+
+    .top-nav-cta {
+      padding: 0.75rem 1.5rem;
+      background: rgba(80, 120, 180, 0.2);
+      border: 1px solid rgba(80, 120, 180, 0.4);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.95rem;
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+
+    .top-nav-cta:hover {
+      background: rgba(80, 120, 180, 0.3);
+      border-color: rgba(80, 120, 180, 0.6);
+    }
+
+    /* Hero content */
+    .hero-content {
+      max-width: 1200px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-headline {
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 1.15;
+      color: #ffffff;
+      margin-bottom: 2rem;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-subheadline {
+      font-size: 1.5rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 900px;
+      margin: 0 auto 3rem;
+      font-weight: 400;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-cta-primary {
+      padding: 1.25rem 2.5rem;
+      background: rgba(80, 120, 180, 0.9);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: all 0.3s;
+      border: 2px solid rgba(80, 120, 180, 0.9);
+    }
+
+    .hero-cta-primary:hover {
+      background: rgba(80, 120, 180, 1);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(80, 120, 180, 0.3);
+    }
+
+    .hero-cta-secondary {
+      padding: 1.25rem 2.5rem;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: all 0.3s;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .hero-cta-secondary:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    /* Scroll indicator */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .scroll-arrow {
+      width: 24px;
+      height: 24px;
+      border-left: 2px solid rgba(255, 255, 255, 0.5);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+      transform: rotate(-45deg);
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0) rotate(-45deg); }
+      40% { transform: translateY(8px) rotate(-45deg); }
+      60% { transform: translateY(4px) rotate(-45deg); }
+    }
+
+    /* Content section */
+    .content-section {
+      padding: 8rem 3rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      background: #0a0a0a;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+      margin-top: 4rem;
+    }
+
+    .content-card {
+      padding: 2.5rem;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+
+    .content-card:hover {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(80, 120, 180, 0.3);
+      transform: translateY(-4px);
+    }
+
+    .content-card-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 1rem;
+    }
+
+    .content-card-text {
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.7;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-headline {
+        font-size: 2.5rem;
+      }
+
+      .hero-subheadline {
+        font-size: 1.2rem;
+      }
+
+      .hero-cta-group {
+        flex-direction: column;
+      }
+
+      .top-nav {
+        padding: 1rem 1.5rem;
+      }
+
+      .top-nav-links {
+        gap: 1rem;
+      }
+
+      .content-section {
+        padding: 4rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Navigation -->
+  <nav class="top-nav">
+    <a href="index.html" class="top-nav-logo">Capital Topologies</a>
+    <div class="top-nav-links">
+      <a href="products/miaf.html" class="top-nav-link">Products</a>
+      <a href="explained.html" class="top-nav-link">Explained</a>
+      <a href="contact.html" class="top-nav-cta">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Full-Screen Hero -->
+  <section class="hero-fullscreen">
+    <div class="hero-content">
+      <h1 class="hero-headline">
+        Mapping value transformation across complex systems
+      </h1>
+      <p class="hero-subheadline">
+        Validated analytical frameworks for strategic decision-making in defense, enterprise, and research domains. 
+        We track how abstract capital transforms across dimensional registers and organizational stacks.
+      </p>
+      <div class="hero-cta-group">
+        <a href="products/miaf.html" class="hero-cta-primary">Explore Frameworks</a>
+        <a href="explained.html" class="hero-cta-secondary">Learn More</a>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span>Scroll to explore</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section class="content-section">
+    <div class="content-grid">
+      <div class="content-card">
+        <h3 class="content-card-title">MIAF</h3>
+        <p class="content-card-text">
+          Military Innovation Assessment Framework. Validated against 28+ historical cases, 
+          distinguishing genuine innovation from technical modernization through four-dimensional analysis.
+        </p>
+      </div>
+
+      <div class="content-card">
+        <h3 class="content-card-title">RAA</h3>
+        <p class="content-card-text">
+          Recursive Agent Architecture. Domain-agnostic framework for stress-testing analytical 
+          conclusions through adversarial validation and recursive challenge patterns.
+        </p>
+      </div>
+
+      <div class="content-card">
+        <h3 class="content-card-title">Cognitive Ledger</h3>
+        <p class="content-card-text">
+          Systematic tracking of analytical decisions and reasoning trajectories. 
+          Maps cognitive capital transformation across organizational knowledge stacks.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

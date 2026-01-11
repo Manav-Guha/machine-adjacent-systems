@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cognitive Ledger - Capital Topologies</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .content-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .content-box {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 8px;
+    }
+
+    .content-box h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 1.5rem;
+    }
+
+    .content-box p {
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .status-box {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 3rem;
+    }
+
+    .status-badge {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: rgba(255, 200, 100, 0.1);
+      border: 1px solid rgba(255, 200, 100, 0.3);
+      color: rgba(255, 200, 100, 1);
+      border-radius: 4px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="logo">Capital Topologies</a>
+      </div>
+
+      <div class="nav-section-collapsible">
+        <div class="nav-section-header">
+          <h2 class="nav-title">Products</h2>
+          <span class="nav-collapse-icon">▼</span>
+        </div>
+        <div class="nav-submenu-container">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="miaf.html" class="nav-link">MIAF</a></li>
+            <li class="nav-item"><a href="raa.html" class="nav-link">RAA</a></li>
+            <li class="nav-item"><a href="cognitive-ledger.html" class="nav-link">Cognitive Ledger</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="nav-section">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="../application-studies.html" class="nav-link">Application Studies</a></li>
+          <li class="nav-item"><a href="../documentation.html" class="nav-link">Documentation</a></li>
+          <li class="nav-item"><a href="../newsroom.html" class="nav-link">Newsroom</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="../explained.html" class="nav-link">Capital Topologies Explained</a></li>
+          <li class="nav-item"><a href="../careers.html" class="nav-link">Careers</a></li>
+          <li class="nav-item"><a href="../contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <header class="hero">
+        <h1 class="hero-title">Cognitive Ledger</h1>
+        <p class="hero-subtitle">Systematic tracking of analytical decisions and reasoning trajectories</p>
+      </header>
+
+      <div class="content-wrapper">
+        <div class="content-box">
+          <h3>Systematic Tracking</h3>
+          <p>Cognitive Ledger provides structured documentation of analytical decisions, reasoning trajectories, and knowledge transformations across organizational contexts. The framework maps how cognitive capital flows through decision-making processes, capturing the evolution of understanding over time.</p>
+        </div>
+
+        <div class="content-box">
+          <h3>Knowledge Stacks</h3>
+          <p>Track decisions across hierarchical knowledge layers—from raw data inputs through analytical processing to strategic conclusions. The ledger maintains explicit links between evidentiary foundations and downstream judgments, enabling retrospective audit and forward-looking refinement.</p>
+        </div>
+
+        <div class="content-box status-box">
+          <h3>Development Status</h3>
+          <p style="color: rgba(255, 255, 255, 0.6);">Framework specification and implementation tooling currently in development</p>
+          <span class="status-badge">Coming Soon</span>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

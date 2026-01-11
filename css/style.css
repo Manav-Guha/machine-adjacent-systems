@@ -1,0 +1,443 @@
+/* Capital Topologies - Minimal Bauhaus Aesthetic */
+
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #1a1a1a;
+  --bg-card: #151515;
+  --text-primary: #ffffff;
+  --text-secondary: #b8b8b8;
+  --text-muted: #808080;
+  --border-color: #2a2a2a;
+  --accent-teal: #2a5a5a;
+  --accent-teal-hover: #3a6a6a;
+  --accent-subtle: #2a2a2a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', system-ui, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+  width: 320px;
+  background: var(--bg-primary);
+  border-right: 1px solid var(--border-color);
+  padding: 2rem 1.5rem;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.sidebar-header {
+  margin-bottom: 3rem;
+}
+
+.logo {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  text-decoration: none;
+  display: block;
+}
+
+.nav-section {
+  margin-bottom: 2rem;
+}
+
+.nav-section-collapsible {
+  margin-bottom: 2rem;
+}
+
+.nav-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  user-select: none;
+}
+
+.nav-section-header:hover .nav-title {
+  color: var(--text-secondary);
+}
+
+.nav-collapse-icon {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  transition: transform 0.2s;
+}
+
+.nav-section-collapsible.open .nav-collapse-icon {
+  transform: rotate(180deg);
+}
+
+.nav-submenu-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.nav-section-collapsible.open .nav-submenu-container {
+  max-height: 500px;
+}
+
+.nav-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.nav-item {
+  margin-bottom: 0.5rem;
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 0;
+  transition: color 0.2s;
+  font-size: 0.95rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--text-primary);
+  border-left: 2px solid var(--accent-teal);
+  padding-left: 0.5rem;
+}
+
+.nav-submenu {
+  list-style: none;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.nav-submenu .nav-link {
+  font-size: 0.9rem;
+  padding: 0.4rem 0;
+}
+
+.nav-submenu .nav-link::before {
+  content: '└ ';
+  color: var(--text-muted);
+  margin-right: 0.25rem;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 101;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.75rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  margin-left: 320px;
+  padding: 4rem 3rem;
+  max-width: 1400px;
+}
+
+/* Hero Section */
+.hero {
+  margin-bottom: 5rem;
+  max-width: 800px;
+}
+
+.hero-title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.hero-description {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 700px;
+}
+
+/* Section Headers */
+.section {
+  margin-bottom: 5rem;
+}
+
+/* Visualization Section */
+.visualization-section {
+  margin: 4rem 0;
+  width: 100%;
+  position: relative;
+}
+
+#capital-flow-canvas {
+  width: 100%;
+  height: 600px;
+  background: var(--bg-primary);
+  border: none;
+  display: block;
+}
+
+.visualization-caption {
+  margin-top: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.visualization-caption p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* Philosophy Content */
+.philosophy-content {
+  max-width: 800px;
+}
+
+.philosophy-text {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.section-link {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.section-link:hover {
+  color: var(--text-primary);
+}
+
+/* Product Cards */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.product-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 2rem;
+  transition: border-color 0.3s;
+}
+
+.product-card:hover {
+  border-color: var(--accent-teal);
+}
+
+.product-visual {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: var(--bg-secondary);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+}
+
+.product-visual-placeholder {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.product-header {
+  margin-bottom: 1rem;
+}
+
+.product-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.product-status {
+  display: inline-block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.25rem 0.75rem;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.product-status.available {
+  color: var(--accent-teal);
+  border-color: var(--accent-teal);
+}
+
+.product-description {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.product-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.product-link:hover {
+  color: var(--accent-teal);
+}
+
+.product-link::after {
+  content: '→';
+  margin-left: 0.5rem;
+}
+
+/* Credentials Section */
+.credentials {
+  max-width: 700px;
+  padding: 2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+}
+
+.credentials-content {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Under Development Placeholder */
+.under-development {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.under-development-icon {
+  font-size: 3rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.under-development-text {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .main-content {
+    margin-left: 0;
+    padding: 2rem 1.5rem;
+    padding-top: 5rem;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .main-content {
+    padding: 1.5rem 1rem;
+    padding-top: 4.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .product-card {
+    padding: 1.5rem;
+  }
+}

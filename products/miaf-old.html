@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MIAF - Capital Topologies</title>
+  <meta name="description" content="Military Innovation Assessment Framework - Distinguishing transformation from incremental change">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="layout">
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="logo">Capital Topologies</a>
+      </div>
+
+      <div class="nav-section-collapsible">
+        <div class="nav-section-header">
+          <h2 class="nav-title">Products</h2>
+          <span class="nav-collapse-icon">▼</span>
+        </div>
+        <div class="nav-submenu-container">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="miaf.html" class="nav-link">MIAF</a>
+            </li>
+            <li class="nav-item">
+              <a href="raa.html" class="nav-link">RAA</a>
+            </li>
+            <li class="nav-item">
+              <a href="cognitive-ledger.html" class="nav-link">Cognitive Ledger</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="nav-section">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="../application-studies.html" class="nav-link">Application Studies</a>
+          </li>
+          <li class="nav-item">
+            <a href="../documentation.html" class="nav-link">Documentation</a>
+          </li>
+          <li class="nav-item">
+            <a href="../newsroom.html" class="nav-link">Newsroom</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="../explained.html" class="nav-link">Capital Topologies Explained</a>
+          </li>
+          <li class="nav-item">
+            <a href="../careers.html" class="nav-link">Careers</a>
+          </li>
+          <li class="nav-item">
+            <a href="../contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <article>
+        <!-- Header -->
+        <header class="hero">
+          <h1 class="hero-title">MIAF</h1>
+          <p class="hero-subtitle">Military Innovation Assessment Framework</p>
+          <p class="hero-description">
+            A validated framework for distinguishing genuine innovation from technical modernization. 
+            MIAF assesses developments across four dimensions—Cognitive, Irreversibility, Disruption, 
+            and Generative—mapped against organizational domains: People, Process, Technology, and Organization.
+          </p>
+        </header>
+
+        <!-- Visualization -->
+        <section class="visualization-section">
+          <canvas id="miaf-surface" style="width: 100%; height: 400px; background: #0a0e1a; border: 1px solid rgba(255, 255, 255, 0.1);"></canvas>
+        </section>
+
+        <!-- Framework Overview -->
+        <section class="section">
+          <div class="section-header">
+            <h2 class="section-title">Framework Overview</h2>
+          </div>
+
+          <div style="max-width: 800px;">
+            <div style="margin-bottom: 3rem;">
+              <h3 style="font-size: 1.25rem; margin-bottom: 1rem; letter-spacing: -0.01em;">The Four Registers</h3>
+              <div style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem;">
+                <p style="margin-bottom: 1rem;">
+                  <strong style="color: var(--text-primary);">Cognitive:</strong> Does the innovation restructure 
+                  how practitioners conceptualize problems, solutions, or strategic possibilities? Distinguishes 
+                  between incremental optimization and fundamental reorientation of thought.
+                </p>
+                <p style="margin-bottom: 1rem;">
+                  <strong style="color: var(--text-primary);">Irreversibility:</strong> To what degree does adoption 
+                  create path dependencies that prevent reversion to previous approaches? Measures structural lock-in 
+                  across technical, organizational, and doctrinal dimensions.
+                </p>
+                <p style="margin-bottom: 1rem;">
+                  <strong style="color: var(--text-primary);">Disruption:</strong> How significantly does the innovation 
+                  alter competitive dynamics, strategic calculations, or operational paradigms? Assesses magnitude of 
+                  perturbation to existing equilibria.
+                </p>
+                <p style="margin-bottom: 1rem;">
+                  <strong style="color: var(--text-primary);">Generative:</strong> What new strategic possibilities, 
+                  operational concepts, or problem domains emerge from adoption? Evaluates capacity to create previously 
+                  impossible or unconsidered pathways.
+                </p>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 3rem;">
+              <h3 style="font-size: 1.25rem; margin-bottom: 1rem; letter-spacing: -0.01em;">PPTO Mapping</h3>
+              <div style="color: var(--text-secondary); line-height: 1.7;">
+                <p style="margin-bottom: 1rem;">
+                  Innovation effects manifest across organizational domains. MIAF's Register × PPTO signature matrix 
+                  reveals where transformative impact concentrates:
+                </p>
+                <p style="margin-bottom: 1rem;">
+                  <strong style="color: var(--text-primary);">People:</strong> Skills, training, roles, human capital requirements
+                </p>
+                <p style="margin-bottom: 1rem;">
+                  <strong style="color: var(--text-primary);">Process:</strong> Workflows, doctrine, procedural frameworks
+                </p>
+                <p style="margin-bottom: 1rem;">
+                  <strong style="color: var(--text-primary);">Technology:</strong> Hardware, software, material infrastructure
+                </p>
+                <p style="margin-bottom: 1rem;">
+                  <strong style="color: var(--text-primary);">Organization:</strong> Structure, command hierarchies, institutional design
+                </p>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 3rem;">
+              <h3 style="font-size: 1.25rem; margin-bottom: 1rem; letter-spacing: -0.01em;">Validation</h3>
+              <div style="color: var(--text-secondary); line-height: 1.7;">
+                <p>
+                  MIAF has been validated against 28+ historical military innovations spanning 150 years, from the 
+                  stirrup and gunpowder to GPS-guided munitions and network-centric warfare. The framework demonstrates 
+                  consistent analytical discrimination between genuine innovations (composite scores ≥12) and modernizations 
+                  (scores <12).
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Access the Tool -->
+        <section class="section">
+          <div class="section-header">
+            <h2 class="section-title">Access the Tool</h2>
+          </div>
+
+          <div style="max-width: 600px;">
+            <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+              Explore validated historical cases, compare innovation profiles, and examine Register × PPTO signatures.
+            </p>
+            <a href="https://military-innovation-tool.vercel.app/" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               style="display: inline-flex; align-items: center; padding: 0.5rem 1rem; background: transparent; 
+                      border: 1px solid var(--border-color); color: var(--text-secondary); text-decoration: none; 
+                      font-size: 0.875rem; transition: all 0.2s;">
+              Explore Tool
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" 
+                   style="margin-left: 0.5rem;">
+                <path d="M6 3L11 8L6 13"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+
+        <!-- Applications -->
+        <section class="section">
+          <div class="section-header">
+            <h2 class="section-title">Applications</h2>
+          </div>
+
+          <div style="max-width: 800px; color: var(--text-secondary); line-height: 1.7;">
+            <div style="margin-bottom: 2rem;">
+              <h3 style="color: var(--text-primary); font-size: 1.1rem; margin-bottom: 0.75rem;">Defense Organizations</h3>
+              <p>
+                Strategic planning, capability development, procurement prioritization, innovation portfolio management, 
+                competitive assessment.
+              </p>
+            </div>
+            <div style="margin-bottom: 2rem;">
+              <h3 style="color: var(--text-primary); font-size: 1.1rem; margin-bottom: 0.75rem;">Enterprise</h3>
+              <p>
+                Technology investment decisions, competitive intelligence, strategic positioning, innovation program evaluation.
+              </p>
+            </div>
+            <div>
+              <h3 style="color: var(--text-primary); font-size: 1.1rem; margin-bottom: 0.75rem;">Research & Education</h3>
+              <p>
+                Military history analysis, strategic studies pedagogy, innovation theory development, case study methodology.
+              </p>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/miaf-viz.js"></script>
+</body>
+</html>

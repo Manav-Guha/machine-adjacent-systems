@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MIAF - Capital Topologies</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* Grid-based layout */
+    .content-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .content-box {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 8px;
+    }
+
+    .content-box h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 1.5rem;
+    }
+
+    .content-box p {
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .content-box strong {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* Visualization */
+    .viz-box {
+      grid-column: 1 / 3;
+      background: #0a0e1a;
+      border: 1px solid rgba(80, 120, 180, 0.2);
+      padding: 2rem;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+    }
+
+    /* Tool access - top right */
+    .tool-box {
+      background: rgba(80, 120, 180, 0.1);
+      border: 1px solid rgba(80, 120, 180, 0.3);
+    }
+
+    .tool-box a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background: rgba(80, 120, 180, 0.8);
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .tool-box a:hover {
+      background: rgba(80, 120, 180, 1);
+    }
+
+    /* Validation - center */
+    .validation-box {
+      grid-column: 1 / -1;
+      text-align: center;
+    }
+
+    /* Applications - horizontal */
+    .applications-box {
+      grid-column: 1 / -1;
+    }
+
+    .applications-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .app-card {
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 4px;
+    }
+
+    .app-card h4 {
+      color: rgba(80, 120, 180, 1);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .app-card p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="logo">Capital Topologies</a>
+      </div>
+
+      <div class="nav-section-collapsible">
+        <div class="nav-section-header">
+          <h2 class="nav-title">Products</h2>
+          <span class="nav-collapse-icon">▼</span>
+        </div>
+        <div class="nav-submenu-container">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="miaf.html" class="nav-link">MIAF</a></li>
+            <li class="nav-item"><a href="raa.html" class="nav-link">RAA</a></li>
+            <li class="nav-item"><a href="cognitive-ledger.html" class="nav-link">Cognitive Ledger</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="nav-section">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="../application-studies.html" class="nav-link">Application Studies</a></li>
+          <li class="nav-item"><a href="../documentation.html" class="nav-link">Documentation</a></li>
+          <li class="nav-item"><a href="../newsroom.html" class="nav-link">Newsroom</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="../explained.html" class="nav-link">Capital Topologies Explained</a></li>
+          <li class="nav-item"><a href="../careers.html" class="nav-link">Careers</a></li>
+          <li class="nav-item"><a href="../contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <header class="hero">
+        <h1 class="hero-title">MIAF</h1>
+        <p class="hero-subtitle">Military Innovation Assessment Framework</p>
+      </header>
+
+      <div class="content-wrapper">
+        <!-- Top row: Visualization and Tool -->
+        <div class="viz-box">
+          <img src="../assets/miaf-surface.png" alt="MIAF Register × PPTO Surface" style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+
+        <div class="content-box tool-box" style="grid-column: 3; grid-row: 1;">
+          <h3>Explore Tool</h3>
+          <p>Interactive assessment tool with validated historical cases.</p>
+          <a href="https://military-innovation-tool.vercel.app/" target="_blank">Launch MIAF Tool →</a>
+        </div>
+
+        <!-- Four Registers -->
+        <div class="content-box" style="grid-column: 1 / 3; grid-row: 2;">
+          <h3>The Four Registers</h3>
+          <p><strong>Cognitive:</strong> Does the innovation restructure how practitioners conceptualize problems, solutions, or strategic possibilities?</p>
+          <p><strong>Irreversibility:</strong> To what degree does adoption create path dependencies that prevent reversion to previous approaches?</p>
+          <p><strong>Disruption:</strong> How significantly does the innovation alter competitive dynamics, strategic calculations, or operational paradigms?</p>
+          <p><strong>Generative:</strong> Does the innovation enable fundamentally new capabilities, operational concepts, or strategic possibilities?</p>
+        </div>
+
+        <!-- PPTO Mapping -->
+        <div class="content-box" style="grid-column: 3; grid-row: 2;">
+          <h3>PPTO Mapping</h3>
+          <p><strong>People:</strong> Training, expertise, cognitive frameworks</p>
+          <p><strong>Process:</strong> Operational procedures, decision cycles</p>
+          <p><strong>Technology:</strong> Material systems, interfaces</p>
+          <p><strong>Organization:</strong> Structure, command hierarchies</p>
+        </div>
+
+        <!-- Validation -->
+        <div class="content-box" style="grid-column: 1 / -1; text-align: left;">
+          <h3>Validation</h3>
+          <p>MIAF has been validated against 28+ historical military examples spanning over 1000 years, from gunpowder to GPS-guided munitions and network-centric warfare. The framework demonstrates consistent analytical discrimination between genuine innovations and technical modernizations.</p>
+        </div>
+
+        <!-- Applications -->
+        <div class="content-box applications-box">
+          <h3>Applications</h3>
+          <div class="applications-grid">
+            <div class="app-card">
+              <h4>Defense Assessment</h4>
+              <p>Strategic evaluation of emerging military technologies</p>
+            </div>
+            <div class="app-card">
+              <h4>R&D Investment</h4>
+              <p>Portfolio management for innovation programs</p>
+            </div>
+            <div class="app-card">
+              <h4>Historical Analysis</h4>
+              <p>Retrospective assessment of transformations</p>
+            </div>
+            <div class="app-card">
+              <h4>Comparative Studies</h4>
+              <p>Cross-domain innovation pattern analysis</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
