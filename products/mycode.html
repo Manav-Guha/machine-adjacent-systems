@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MIAF - Machine Adjacent Systems</title>
+  <title>myCode - Machine Adjacent Systems</title>
   <link rel="stylesheet" href="../css/style.css">
   <style>
-    /* Grid-based layout */
     .content-wrapper {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -38,20 +37,6 @@
       color: rgba(255, 255, 255, 0.9);
     }
 
-    /* Visualization */
-    .viz-box {
-      grid-column: 1 / 3;
-      background: #0a0e1a;
-      border: 1px solid rgba(80, 120, 180, 0.2);
-      padding: 2rem;
-      height: 400px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 8px;
-    }
-
-    /* Tool access - top right */
     .tool-box {
       background: rgba(80, 120, 180, 0.1);
       border: 1px solid rgba(80, 120, 180, 0.3);
@@ -59,7 +44,7 @@
 
     .tool-box a {
       display: inline-block;
-      margin-top: 1rem;
+      margin-top: 0.5rem;
       padding: 0.75rem 1.5rem;
       background: rgba(80, 120, 180, 0.8);
       color: #ffffff;
@@ -72,40 +57,49 @@
       background: rgba(80, 120, 180, 1);
     }
 
-    /* Validation - center */
-    .validation-box {
-      grid-column: 1 / -1;
-      text-align: center;
+    .tool-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
 
-    /* Applications - horizontal */
-    .applications-box {
-      grid-column: 1 / -1;
+    .tool-links li {
+      margin-bottom: 0.75rem;
     }
 
-    .applications-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      margin-top: 1.5rem;
+    .steps-list {
+      list-style: none;
+      padding: 0;
+      counter-reset: steps;
     }
 
-    .app-card {
-      padding: 1.5rem;
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      border-radius: 4px;
+    .steps-list li {
+      counter-increment: steps;
+      padding: 0.5rem 0;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.7;
     }
 
-    .app-card h4 {
+    .steps-list li::before {
+      content: counter(steps) ".";
       color: rgba(80, 120, 180, 1);
-      font-weight: 600;
-      margin-bottom: 0.5rem;
+      font-weight: 700;
+      margin-right: 0.75rem;
     }
 
-    .app-card p {
-      color: rgba(255, 255, 255, 0.6);
-      font-size: 0.9rem;
+    .lang-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .lang-list li {
+      padding: 0.4rem 0;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .lang-list li::before {
+      content: "\2192 ";
+      color: rgba(80, 120, 180, 1);
     }
   </style>
 </head>
@@ -158,67 +152,60 @@
 
     <main class="main-content">
       <header class="hero">
-        <h1 class="hero-title">MIAF</h1>
-        <p class="hero-subtitle">Military Innovation Assessment Framework</p>
+        <h1 class="hero-title">myCode</h1>
+        <p class="hero-subtitle">Pre-deployment stress testing for AI-generated code</p>
       </header>
 
       <div class="content-wrapper">
-        <!-- Top row: Visualization and Tool -->
-        <div class="viz-box">
-          <img src="../assets/miaf-surface.png" alt="MIAF Register × PPTO Surface" style="width: 100%; height: 100%; object-fit: contain;">
+        <!-- Row 1: What It Does (2 cols) + Links (col 3) -->
+        <div class="content-box" style="grid-column: 1 / 3; grid-row: 1;">
+          <h3>What It Does</h3>
+          <p>myCode takes a GitHub repo, installs dependencies in a sandbox, and runs runtime stress tests against stated intent. A prediction model trained on 7,500+ repos predicts likely failures before tests run.</p>
+          <p>Submit a repository, declare what it should do, and get a diagnostic report showing where and when it breaks — before deployment.</p>
         </div>
 
         <div class="content-box tool-box" style="grid-column: 3; grid-row: 1;">
-          <h3>Explore Tool</h3>
-          <p>Interactive assessment tool with validated historical cases.</p>
-          <a href="https://miaf-tool.vercel.app/" target="_blank">Launch MIAF Tool →</a>
+          <h3>Get Started</h3>
+          <ul class="tool-links">
+            <li><a href="https://mycode-ai.vercel.app" target="_blank">Web Interface →</a></li>
+            <li><p style="color: rgba(255,255,255,0.7); margin: 0;"><strong>CLI:</strong> <code style="background: rgba(255,255,255,0.1); padding: 0.2rem 0.5rem; border-radius: 3px;">pip install mycode-ai</code></p></li>
+            <li><a href="https://github.com/Manav-Guha/mycode" target="_blank">GitHub →</a></li>
+          </ul>
         </div>
 
-        <!-- Four Registers -->
+        <!-- Row 2: How It Works (2 cols) + Supported Languages (col 3) -->
         <div class="content-box" style="grid-column: 1 / 3; grid-row: 2;">
-          <h3>The Four Registers</h3>
-          <p><strong>Cognitive:</strong> Does the innovation restructure how practitioners conceptualize problems, solutions, or strategic possibilities?</p>
-          <p><strong>Irreversibility:</strong> To what degree does adoption create path dependencies that prevent reversion to previous approaches?</p>
-          <p><strong>Disruption:</strong> How significantly does the innovation alter competitive dynamics, strategic calculations, or operational paradigms?</p>
-          <p><strong>Generative:</strong> Does the innovation enable fundamentally new capabilities, operational concepts, or strategic possibilities?</p>
+          <h3>How It Works</h3>
+          <ol class="steps-list">
+            <li>Submit a GitHub repo URL</li>
+            <li>Declare intended behavior</li>
+            <li>Dependencies installed in isolated sandbox</li>
+            <li>Prediction model flags likely failures</li>
+            <li>Runtime stress tests execute</li>
+            <li>Diagnostic report generated</li>
+          </ol>
         </div>
 
-        <!-- PPTO Mapping -->
         <div class="content-box" style="grid-column: 3; grid-row: 2;">
-          <h3>PPTO Mapping</h3>
-          <p><strong>People:</strong> Training, expertise, cognitive frameworks</p>
-          <p><strong>Process:</strong> Operational procedures, decision cycles</p>
-          <p><strong>Technology:</strong> Material systems, interfaces</p>
-          <p><strong>Organization:</strong> Structure, command hierarchies</p>
+          <h3>Supported Languages</h3>
+          <ul class="lang-list">
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+          </ul>
+          <p style="font-size: 0.9rem; color: rgba(255,255,255,0.5); margin-top: 1rem;">More languages coming soon</p>
         </div>
 
-        <!-- Validation -->
+        <!-- Row 3: The Corpus (full width) -->
         <div class="content-box" style="grid-column: 1 / -1; text-align: left;">
-          <h3>Validation</h3>
-          <p>MIAF has been validated against 28+ historical military examples spanning over 1000 years, from gunpowder to GPS-guided munitions and network-centric warfare. The framework demonstrates consistent analytical discrimination between genuine innovations and technical modernizations.</p>
+          <h3>The Corpus</h3>
+          <p>Trained on <strong>7,500+ public repositories</strong>. The prediction model achieves <strong>0.91 AUC</strong> for failure prediction. Continuously expanding corpus improves accuracy across languages, frameworks, and project types.</p>
         </div>
 
-        <!-- Applications -->
-        <div class="content-box applications-box">
-          <h3>Applications</h3>
-          <div class="applications-grid">
-            <div class="app-card">
-              <h4>Defense Assessment</h4>
-              <p>Strategic evaluation of emerging military technologies</p>
-            </div>
-            <div class="app-card">
-              <h4>R&D Investment</h4>
-              <p>Portfolio management for innovation programs</p>
-            </div>
-            <div class="app-card">
-              <h4>Historical Analysis</h4>
-              <p>Retrospective assessment of transformations</p>
-            </div>
-            <div class="app-card">
-              <h4>Comparative Studies</h4>
-              <p>Cross-domain innovation pattern analysis</p>
-            </div>
-          </div>
+        <!-- Row 4: CI Gate (full width) -->
+        <div class="content-box" style="grid-column: 1 / -1; text-align: left;">
+          <h3>CI Gate Integration</h3>
+          <p>Integrate myCode into your CI/CD pipeline. Run as a pre-merge check to catch failures before they reach production. Available as a GitHub Action or standalone CLI step.</p>
         </div>
       </div>
     </main>
