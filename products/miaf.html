@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MIAF - Machine Adjacent Systems</title>
+  <title>MIAF — Military Innovation Assessment Framework | Machine Adjacent Systems</title>
+  <meta name="description" content="A four-register analytical framework for distinguishing genuine military innovation from technical modernization. Human-led scoring with adversarial AI challenge. Validated against 28+ historical cases spanning 1000 years.">
   <link rel="stylesheet" href="../css/style.css">
   <style>
     /* Grid-based layout */
@@ -15,8 +16,8 @@
     }
 
     .content-box {
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: #2a2a2a;
+      border: 1px solid rgba(255, 255, 255, 0.08);
       padding: 2rem;
       border-radius: 8px;
     }
@@ -35,14 +36,14 @@
     }
 
     .content-box strong {
-      color: rgba(255, 255, 255, 0.9);
+      color: #ffffff;
     }
 
     /* Visualization */
     .viz-box {
       grid-column: 1 / 3;
-      background: #0a0e1a;
-      border: 1px solid rgba(80, 120, 180, 0.2);
+      background: #2a2a2a;
+      border: 1px solid rgba(255, 255, 255, 0.08);
       padding: 2rem;
       height: 400px;
       display: flex;
@@ -51,34 +52,36 @@
       border-radius: 8px;
     }
 
-    /* Tool access - top right */
+    /* Tool access */
     .tool-box {
-      background: rgba(80, 120, 180, 0.1);
-      border: 1px solid rgba(80, 120, 180, 0.3);
+      background: #2a2a2a;
+      border: 1px solid rgba(185, 28, 28, 0.3);
     }
 
     .tool-box a {
       display: inline-block;
       margin-top: 1rem;
       padding: 0.75rem 1.5rem;
-      background: rgba(80, 120, 180, 0.8);
-      color: #ffffff;
+      background: #000;
+      color: #b91c1c;
       text-decoration: none;
       border-radius: 4px;
-      font-weight: 600;
+      font-weight: 700;
+      transition: all 0.2s;
     }
 
     .tool-box a:hover {
-      background: rgba(80, 120, 180, 1);
+      background: #1a1a1a;
+      color: #dc2626;
     }
 
-    /* Validation - center */
+    /* Validation */
     .validation-box {
       grid-column: 1 / -1;
       text-align: center;
     }
 
-    /* Applications - horizontal */
+    /* Applications */
     .applications-box {
       grid-column: 1 / -1;
     }
@@ -92,20 +95,62 @@
 
     .app-card {
       padding: 1.5rem;
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      background: #f9f9f9;
+      border: 1px solid rgba(255, 255, 255, 0.06);
       border-radius: 4px;
     }
 
     .app-card h4 {
-      color: rgba(80, 120, 180, 1);
+      color: #b91c1c;
       font-weight: 600;
       margin-bottom: 0.5rem;
     }
 
     .app-card p {
-      color: rgba(255, 255, 255, 0.6);
+      color: rgba(255, 255, 255, 0.65);
       font-size: 0.9rem;
+    }
+
+    /* Agent roles list */
+    .agent-roles {
+      list-style: none;
+      padding: 0;
+      counter-reset: agent-roles;
+      margin-top: 1rem;
+    }
+
+    .agent-roles li {
+      counter-increment: agent-roles;
+      padding: 1rem 0;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.7;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .agent-roles li:last-child {
+      border-bottom: none;
+    }
+
+    .agent-roles li::before {
+      content: counter(agent-roles) ".";
+      color: #b91c1c;
+      font-weight: 700;
+      margin-right: 0.75rem;
+    }
+
+    .agent-roles strong {
+      color: #ffffff;
+    }
+
+    /* Discipline note */
+    .discipline-note {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      font-style: italic;
     }
   </style>
 </head>
@@ -121,7 +166,11 @@
 
     <nav class="sidebar">
       <div class="sidebar-header">
-        <a href="../index.html" class="logo">Machine Adjacent Systems</a>
+        <a href="../index.html" class="logo">
+          <span class="logo-mas">M<span class="logo-accent">AS</span></span>
+          <span class="logo-divider">|</span>
+          <span class="logo-full">Machine <span class="logo-accent">Adjacent Systems</span></span>
+        </a>
       </div>
 
       <div class="nav-section-collapsible">
@@ -131,26 +180,15 @@
         </div>
         <div class="nav-submenu-container">
           <ul class="nav-list">
-            <li class="nav-item"><a href="mycode.html" class="nav-link">myCode</a></li>
-            <li class="nav-item"><a href="miaf.html" class="nav-link">MIAF</a></li>
-            <li class="nav-item"><a href="raa.html" class="nav-link">RAA</a></li>
-            <li class="nav-item"><a href="cognitive-ledger.html" class="nav-link">Cognitive Ledger</a></li>
+            <li class="nav-item"><a href="mycode.html" class="nav-link"><span class="name-primary">my</span><span class="name-accent">Code</span></a></li>
+            <li class="nav-item"><a href="miaf.html" class="nav-link"><span class="name-primary">M</span><span class="name-accent">IAF</span></a></li>
           </ul>
         </div>
       </div>
 
       <div class="nav-section">
         <ul class="nav-list">
-          <li class="nav-item"><a href="../application-studies.html" class="nav-link">Application Studies</a></li>
-          <li class="nav-item"><a href="../documentation.html" class="nav-link">Documentation</a></li>
-          <li class="nav-item"><a href="../newsroom.html" class="nav-link">Newsroom</a></li>
-        </ul>
-      </div>
-
-      <div class="nav-section">
-        <ul class="nav-list">
           <li class="nav-item"><a href="../explained.html" class="nav-link">Analytical Frameworks Explained</a></li>
-          <li class="nav-item"><a href="../careers.html" class="nav-link">Careers</a></li>
           <li class="nav-item"><a href="../contact.html" class="nav-link">Contact</a></li>
         </ul>
       </div>
@@ -158,8 +196,8 @@
 
     <main class="main-content">
       <header class="hero">
-        <h1 class="hero-title">MIAF</h1>
-        <p class="hero-subtitle">Military Innovation Assessment Framework</p>
+        <h1 class="hero-title"><span class="name-primary">M</span><span class="name-accent">IAF</span></h1>
+        <p class="hero-subtitle">A four-register analytical framework for distinguishing genuine military innovation from technical modernization. Human-led scoring with adversarial AI challenge. Validated against 28+ historical cases spanning 1000 years.</p>
       </header>
 
       <div class="content-wrapper">
@@ -170,14 +208,14 @@
 
         <div class="content-box tool-box" style="grid-column: 3; grid-row: 1;">
           <h3>Explore Tool</h3>
-          <p>Interactive assessment tool with validated historical cases.</p>
-          <a href="https://miaf-tool.vercel.app/" target="_blank">Launch MIAF Tool →</a>
+          <p>Interactive assessment with adversarial AI challenge and validated historical cases.</p>
+          <a href="https://miaf-tool.vercel.app/" target="_blank">Launch <span class="name-primary">M</span><span class="name-accent">IAF</span> Tool →</a>
         </div>
 
         <!-- Four Registers -->
         <div class="content-box" style="grid-column: 1 / 3; grid-row: 2;">
           <h3>The Four Registers</h3>
-          <p><strong>Cognitive:</strong> Does the innovation restructure how practitioners conceptualize problems, solutions, or strategic possibilities?</p>
+          <p><strong>Conceptual:</strong> Does the innovation restructure how practitioners conceptualize problems, solutions, or strategic possibilities?</p>
           <p><strong>Irreversibility:</strong> To what degree does adoption create path dependencies that prevent reversion to previous approaches?</p>
           <p><strong>Disruption:</strong> How significantly does the innovation alter competitive dynamics, strategic calculations, or operational paradigms?</p>
           <p><strong>Generative:</strong> Does the innovation enable fundamentally new capabilities, operational concepts, or strategic possibilities?</p>
@@ -192,10 +230,23 @@
           <p><strong>Organization:</strong> Structure, command hierarchies</p>
         </div>
 
+        <!-- Adversarial AI Challenge (full width) -->
+        <div class="content-box" style="grid-column: 1 / -1; text-align: left;">
+          <h3>Adversarial AI Challenge</h3>
+          <p><span class="name-primary">M</span><span class="name-accent">IAF</span> uses an adversarial AI agent in three distinct roles, each designed to challenge the user's scoring without replacing it.</p>
+          <ol class="agent-roles">
+            <li><strong>Viability gate.</strong> Before scoring begins, the agent evaluates whether the proposed innovation is feasible in scientific terms and prospectively achievable against other criteria.</li>
+            <li><strong>Per-register interrogation.</strong> After the user scores each register, the agent interrogates the scoring decision. The user can recalibrate based on the agent's argumentation — at the register and sub-component level.</li>
+            <li><strong>Macro evaluation.</strong> Once full scoring is complete, the agent evaluates the macro score across all registers and PPTO domains.</li>
+          </ol>
+          <p class="discipline-note">The agent is deliberately restricted from providing its own scores. It presents a "for and against" argument for each score — individual and macro — but does not adjudicate. The user's judgement is the final word. An adversarial counter to AI-led scoring is in active development; until that exists, AI-led adjudication is not part of the framework.</p>
+        </div>
+
         <!-- Validation -->
         <div class="content-box" style="grid-column: 1 / -1; text-align: left;">
           <h3>Validation</h3>
-          <p>MIAF has been validated against 28+ historical military examples spanning over 1000 years, from gunpowder to GPS-guided munitions and network-centric warfare. The framework demonstrates consistent analytical discrimination between genuine innovations and technical modernizations.</p>
+          <p><span class="name-primary">M</span><span class="name-accent">IAF</span> has been validated against 28+ historical military examples spanning over 1000 years — from gunpowder to GPS-guided munitions and network-centric warfare. The framework demonstrates consistent analytical discrimination between genuine innovations and technical modernizations across this set.</p>
+          <p class="discipline-note">Validation is against the historical corpus. <span class="name-primary">M</span><span class="name-accent">IAF</span> produces evidence-grounded analytical discriminations within the framework — not predictions of any particular innovation's strategic future.</p>
         </div>
 
         <!-- Applications -->

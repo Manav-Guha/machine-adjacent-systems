@@ -3,8 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Machine Adjacent Systems</title>
+  <title>Contact — Machine Adjacent Systems</title>
+  <meta name="description" content="Contact Machine Adjacent Systems for myCode access, MIAF demonstrations, partnership opportunities, or research collaboration.">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .contact-email-block {
+      max-width: 700px;
+      margin-top: 2rem;
+      padding: 2.5rem;
+      background: #2a2a2a;
+      border: 1px solid rgba(185, 28, 28, 0.3);
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(255, 255, 255, 0.04);
+    }
+
+    .contact-email-label {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-email-address {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #ffffff;
+      word-break: break-all;
+    }
+
+    .contact-email-address a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .contact-email-address a:hover {
+      color: #b91c1c;
+      text-decoration: underline;
+    }
+
+    .inquiry-list {
+      max-width: 700px;
+      margin-top: 3rem;
+    }
+
+    .inquiry-list h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 1.25rem;
+    }
+
+    .inquiry-list ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .inquiry-list li {
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+    }
+
+    .inquiry-list li:last-child {
+      border-bottom: none;
+    }
+
+    .inquiry-list strong {
+      color: #ffffff;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+  </style>
 </head>
 <body>
   <div class="layout">
@@ -18,7 +93,11 @@
 
     <nav class="sidebar">
       <div class="sidebar-header">
-        <a href="index.html" class="logo">Machine Adjacent Systems</a>
+        <a href="index.html" class="logo">
+          <span class="logo-mas">M<span class="logo-accent">AS</span></span>
+          <span class="logo-divider">|</span>
+          <span class="logo-full">Machine <span class="logo-accent">Adjacent Systems</span></span>
+        </a>
       </div>
 
       <div class="nav-section-collapsible">
@@ -28,26 +107,15 @@
         </div>
         <div class="nav-submenu-container">
           <ul class="nav-list">
-            <li class="nav-item"><a href="products/mycode.html" class="nav-link">myCode</a></li>
-            <li class="nav-item"><a href="products/miaf.html" class="nav-link">MIAF</a></li>
-            <li class="nav-item"><a href="products/raa.html" class="nav-link">RAA</a></li>
-            <li class="nav-item"><a href="products/cognitive-ledger.html" class="nav-link">Cognitive Ledger</a></li>
+            <li class="nav-item"><a href="products/mycode.html" class="nav-link"><span class="name-primary">my</span><span class="name-accent">Code</span></a></li>
+            <li class="nav-item"><a href="products/miaf.html" class="nav-link"><span class="name-primary">M</span><span class="name-accent">IAF</span></a></li>
           </ul>
         </div>
       </div>
 
       <div class="nav-section">
         <ul class="nav-list">
-          <li class="nav-item"><a href="application-studies.html" class="nav-link">Application Studies</a></li>
-          <li class="nav-item"><a href="documentation.html" class="nav-link">Documentation</a></li>
-          <li class="nav-item"><a href="newsroom.html" class="nav-link">Newsroom</a></li>
-        </ul>
-      </div>
-
-      <div class="nav-section">
-        <ul class="nav-list">
           <li class="nav-item"><a href="explained.html" class="nav-link">Analytical Frameworks Explained</a></li>
-          <li class="nav-item"><a href="careers.html" class="nav-link">Careers</a></li>
           <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
       </div>
@@ -57,22 +125,38 @@
       <header class="hero">
         <h1 class="hero-title">Contact</h1>
         <p class="hero-description">
-          For inquiries about Machine Adjacent Systems products, pilot programs, or enterprise demonstrations.
+          For inquiries about <span class="name-primary">my</span><span class="name-accent">Code</span>, <span class="name-primary">M</span><span class="name-accent">IAF</span>, partnership opportunities, or research collaboration, please email us.
         </p>
       </header>
 
       <section class="section">
-        <div class="credentials" style="max-width: 600px;">
-          <p class="credentials-content" style="margin-bottom: 2rem;">
-            For product demonstrations, pilot program participation, or enterprise inquiries, please reach out through professional channels.
-          </p>
-          
-          <div style="color: var(--text-secondary); line-height: 2;">
-            <p><strong style="color: var(--text-primary);">Enterprise Demonstrations:</strong> Contact for MIAF, RAA, or Cognitive Ledger product evaluations</p>
-            <p><strong style="color: var(--text-primary);">Pilot Programs:</strong> Application Studies and validation partnerships</p>
-            <p><strong style="color: var(--text-primary);">Academic Collaboration:</strong> Research partnerships and framework validation</p>
-            <p style="margin-top: 2rem;"><strong style="color: var(--text-primary);">Email:</strong> <a href="mailto:Machine.Adjacent.Systems@protonmail.com" style="color: var(--accent-teal);">Machine.Adjacent.Systems@protonmail.com</a></p>
+        <div class="contact-email-block">
+          <div class="contact-email-label">Email</div>
+          <div class="contact-email-address">
+            <a href="mailto:machine-adjacent-systems@protonmail.com">machine-adjacent-systems@protonmail.com</a>
           </div>
+        </div>
+
+        <div class="inquiry-list">
+          <h3>We respond to inquiries about</h3>
+          <ul>
+            <li>
+              <strong><span class="name-primary">my</span><span class="name-accent">Code</span> access, integrations, and pilot programs</strong>
+              Guided demonstrations, CI/CD integration discussions, validation partnerships
+            </li>
+            <li>
+              <strong><span class="name-primary">M</span><span class="name-accent">IAF</span> demonstrations and case study partnerships</strong>
+              Walkthroughs of the framework and tool, collaborative case study development
+            </li>
+            <li>
+              <strong>Academic collaboration</strong>
+              Research partnerships, framework validation, joint publications
+            </li>
+            <li>
+              <strong>Investment and partnership discussions</strong>
+              Seed-stage investor inquiries, strategic partnerships
+            </li>
+          </ul>
         </div>
       </section>
     </main>

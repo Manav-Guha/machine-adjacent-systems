@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>myCode - Machine Adjacent Systems</title>
+  <title>myCode — Runtime verification for AI-generated code | Machine Adjacent Systems</title>
+  <meta name="description" content="myCode runs runtime stress tests against your stated intent. Evidence-based declarative statements about your code's behaviour under specific conditions. Corpus-grounded from 9,297 (and growing) production repositories.">
   <link rel="stylesheet" href="../css/style.css">
   <style>
     .content-wrapper {
@@ -14,8 +15,8 @@
     }
 
     .content-box {
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: #2a2a2a;
+      border: 1px solid rgba(255, 255, 255, 0.08);
       padding: 2rem;
       border-radius: 8px;
     }
@@ -34,27 +35,29 @@
     }
 
     .content-box strong {
-      color: rgba(255, 255, 255, 0.9);
+      color: #ffffff;
     }
 
     .tool-box {
-      background: rgba(80, 120, 180, 0.1);
-      border: 1px solid rgba(80, 120, 180, 0.3);
+      background: #2a2a2a;
+      border: 1px solid rgba(185, 28, 28, 0.3);
     }
 
     .tool-box a {
       display: inline-block;
       margin-top: 0.5rem;
       padding: 0.75rem 1.5rem;
-      background: rgba(80, 120, 180, 0.8);
-      color: #ffffff;
+      background: #000;
+      color: #b91c1c;
       text-decoration: none;
       border-radius: 4px;
-      font-weight: 600;
+      font-weight: 700;
+      transition: all 0.2s;
     }
 
     .tool-box a:hover {
-      background: rgba(80, 120, 180, 1);
+      background: #1a1a1a;
+      color: #dc2626;
     }
 
     .tool-links {
@@ -82,7 +85,7 @@
 
     .steps-list li::before {
       content: counter(steps) ".";
-      color: rgba(80, 120, 180, 1);
+      color: #b91c1c;
       font-weight: 700;
       margin-right: 0.75rem;
     }
@@ -99,7 +102,67 @@
 
     .lang-list li::before {
       content: "\2192 ";
-      color: rgba(80, 120, 180, 1);
+      color: #b91c1c;
+    }
+
+    /* Roadmap callout */
+    .roadmap-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #b91c1c;
+      margin-bottom: 0.75rem;
+    }
+
+    /* Video embed */
+    .video-box {
+      padding: 0 !important;
+      overflow: hidden;
+    }
+
+    .video-aspect {
+      aspect-ratio: 16/9;
+      width: 100%;
+      background: #000000;
+    }
+
+    .video-aspect iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    .video-caption {
+      padding: 1.25rem 2rem;
+      background: #2a2a2a;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* Discipline note (v4 doctrine framing) */
+    .discipline-note {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    /* Inline code styling */
+    code {
+      background: rgba(255, 255, 255, 0.06);
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px;
+      color: #ffffff;
+      font-family: 'SF Mono', Menlo, Monaco, Consolas, monospace;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -115,7 +178,11 @@
 
     <nav class="sidebar">
       <div class="sidebar-header">
-        <a href="../index.html" class="logo">Machine Adjacent Systems</a>
+        <a href="../index.html" class="logo">
+          <span class="logo-mas">M<span class="logo-accent">AS</span></span>
+          <span class="logo-divider">|</span>
+          <span class="logo-full">Machine <span class="logo-accent">Adjacent Systems</span></span>
+        </a>
       </div>
 
       <div class="nav-section-collapsible">
@@ -125,26 +192,15 @@
         </div>
         <div class="nav-submenu-container">
           <ul class="nav-list">
-            <li class="nav-item"><a href="mycode.html" class="nav-link">myCode</a></li>
-            <li class="nav-item"><a href="miaf.html" class="nav-link">MIAF</a></li>
-            <li class="nav-item"><a href="raa.html" class="nav-link">RAA</a></li>
-            <li class="nav-item"><a href="cognitive-ledger.html" class="nav-link">Cognitive Ledger</a></li>
+            <li class="nav-item"><a href="mycode.html" class="nav-link"><span class="name-primary">my</span><span class="name-accent">Code</span></a></li>
+            <li class="nav-item"><a href="miaf.html" class="nav-link"><span class="name-primary">M</span><span class="name-accent">IAF</span></a></li>
           </ul>
         </div>
       </div>
 
       <div class="nav-section">
         <ul class="nav-list">
-          <li class="nav-item"><a href="../application-studies.html" class="nav-link">Application Studies</a></li>
-          <li class="nav-item"><a href="../documentation.html" class="nav-link">Documentation</a></li>
-          <li class="nav-item"><a href="../newsroom.html" class="nav-link">Newsroom</a></li>
-        </ul>
-      </div>
-
-      <div class="nav-section">
-        <ul class="nav-list">
           <li class="nav-item"><a href="../explained.html" class="nav-link">Analytical Frameworks Explained</a></li>
-          <li class="nav-item"><a href="../careers.html" class="nav-link">Careers</a></li>
           <li class="nav-item"><a href="../contact.html" class="nav-link">Contact</a></li>
         </ul>
       </div>
@@ -152,23 +208,24 @@
 
     <main class="main-content">
       <header class="hero">
-        <h1 class="hero-title">myCode</h1>
-        <p class="hero-subtitle">Pre-deployment stress testing for AI-generated code</p>
+        <h1 class="hero-title"><span class="name-primary">my</span><span class="name-accent">Code</span></h1>
+        <p class="hero-subtitle">Runtime verification for AI-generated code. Evidence-based. Corpus-grounded. Explicit about the conditions of observation.</p>
       </header>
 
       <div class="content-wrapper">
-        <!-- Row 1: What It Does (2 cols) + Links (col 3) -->
+        <!-- Row 1: What It Does (2 cols) + Get Started (col 3) -->
         <div class="content-box" style="grid-column: 1 / 3; grid-row: 1;">
           <h3>What It Does</h3>
-          <p>myCode takes a GitHub repo, installs dependencies in a sandbox, and runs runtime stress tests against stated intent. A prediction model trained on 7,500+ repos predicts likely failures before tests run.</p>
-          <p>Submit a repository, declare what it should do, and get a diagnostic report showing where and when it breaks — before deployment.</p>
+          <p><span class="name-primary">my</span><span class="name-accent">Code</span> runs runtime stress tests against your stated intent. It surfaces structural correspondence between your code and patterns from a corpus of 9,297 (and growing) production repositories — where similar structures historically encountered failure modes.</p>
+          <p>Submit a repository, declare what it should do, and get a diagnostic report showing where structural risks appear and what the runtime tests actually reveal — before deployment.</p>
+          <p class="discipline-note">We make evidence-based declarative statements about your project's current and prospective behaviour under specific conditions. Not claims. Not predictions.</p>
         </div>
 
         <div class="content-box tool-box" style="grid-column: 3; grid-row: 1;">
           <h3>Get Started</h3>
           <ul class="tool-links">
             <li><a href="https://mycode-ai.vercel.app" target="_blank">Web Interface →</a></li>
-            <li><p style="color: rgba(255,255,255,0.7); margin: 0;"><strong>CLI:</strong> <code style="background: rgba(255,255,255,0.1); padding: 0.2rem 0.5rem; border-radius: 3px;">pip install mycode-ai</code></p></li>
+            <li><p style="color: rgba(0,0,0,0.7); margin: 0;"><strong>CLI:</strong> <code>pip install mycode-ai</code></p></li>
             <li><a href="https://github.com/Manav-Guha/mycode" target="_blank">GitHub →</a></li>
           </ul>
         </div>
@@ -177,11 +234,11 @@
         <div class="content-box" style="grid-column: 1 / 3; grid-row: 2;">
           <h3>How It Works</h3>
           <ol class="steps-list">
-            <li>Submit a GitHub repo URL</li>
-            <li>Declare intended behavior</li>
+            <li>Provide your code — GitHub URL, zip upload, or local Python CLI</li>
+            <li>Declare intended behaviour</li>
             <li>Dependencies installed in isolated sandbox</li>
-            <li>Prediction model flags likely failures</li>
-            <li>Runtime stress tests execute</li>
+            <li>Corpus model flags structural correspondence with historical failure patterns</li>
+            <li>Runtime stress tests execute against stated intent</li>
             <li>Diagnostic report generated</li>
           </ol>
         </div>
@@ -193,19 +250,37 @@
             <li>JavaScript</li>
             <li>TypeScript</li>
           </ul>
-          <p style="font-size: 0.9rem; color: rgba(255,255,255,0.5); margin-top: 1rem;">More languages coming soon</p>
+          <p style="font-size: 0.9rem; color: rgba(0,0,0,0.5); margin-top: 1rem;">More languages coming soon</p>
         </div>
 
-        <!-- Row 3: The Corpus (full width) -->
+        <!-- Row 3: Product demo video (full width) -->
+        <div class="content-box video-box" style="grid-column: 1 / -1;">
+          <div class="video-aspect">
+            <!-- TODO: Replace VIDEO_ID_HERE with actual YouTube video ID after recording -->
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+                    title="myCode product demo"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+          </div>
+          <div class="video-caption">
+            <strong><span class="name-primary">my</span><span class="name-accent">Code</span> in action.</strong> A short walkthrough: submit a repository, declare intent, observe the diagnostic report.
+          </div>
+        </div>
+
+        <!-- Row 4: The Corpus (full width) -->
         <div class="content-box" style="grid-column: 1 / -1; text-align: left;">
           <h3>The Corpus</h3>
-          <p>Trained on <strong>7,500+ public repositories</strong>. The prediction model achieves <strong>0.91 AUC</strong> for failure prediction. Continuously expanding corpus improves accuracy across languages, frameworks, and project types.</p>
+          <p>Built on a corpus of <strong>9,297 (and growing) production repositories</strong>. The classifier learns to distinguish failure-prone structural patterns from baseline within the corpus.</p>
+          <p>The corpus is continuously expanded; pattern recognition refines with scale.</p>
+          <p class="discipline-note">The classifier discriminates historical patterns within the corpus. Statements about your specific project are bounded by the conditions of observation.</p>
         </div>
 
-        <!-- Row 4: CI Gate (full width) -->
+        <!-- Row 5: CI Gate roadmap (full width) -->
         <div class="content-box" style="grid-column: 1 / -1; text-align: left;">
+          <span class="roadmap-label">On the roadmap</span>
           <h3>CI Gate Integration</h3>
-          <p>Integrate myCode into your CI/CD pipeline. Run as a pre-merge check to catch failures before they reach production. Available as a GitHub Action or standalone CLI step.</p>
+          <p>Currently available as web interface and standalone CLI. CI/CD pipeline integration — pre-merge checks, GitHub Action — is in active development. The v2 continuous gate that turns episodic verification into continuous discipline.</p>
         </div>
       </div>
     </main>

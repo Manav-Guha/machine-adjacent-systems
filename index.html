@@ -3,10 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Machine Adjacent Systems - Analytical Frameworks and Developer Tools for Complex Systems</title>
-  <meta name="description" content="Analytical frameworks and developer tools for complex systems">
+  <title>Machine Adjacent Systems — Verification frameworks for high-stakes systems</title>
+  <meta name="description" content="Evidence-grounded analysis frameworks for systems where claim and performance verification are mission-critical.">
   <link rel="stylesheet" href="css/style.css">
   <style>
+    /* Smooth scroll for anchor links */
+    html {
+      scroll-behavior: smooth;
+    }
+
     /* Full-screen hero */
     .hero-fullscreen {
       min-height: 100vh;
@@ -14,24 +19,10 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(135deg, #050810 0%, #0a0e1a 50%, #060a12 100%);
+      background: #1a1a1a;
       position: relative;
       overflow: hidden;
       padding: 2rem;
-    }
-
-    /* Subtle background pattern */
-    .hero-fullscreen::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: 
-        radial-gradient(circle at 20% 30%, rgba(60, 90, 140, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(80, 120, 180, 0.08) 0%, transparent 50%);
-      pointer-events: none;
     }
 
     /* Top navigation bar */
@@ -40,22 +31,47 @@
       top: 0;
       left: 0;
       right: 0;
-      padding: 1.5rem 3rem;
+      padding: 1.25rem 3rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(10, 10, 10, 0.8);
+      background: rgba(26, 26, 26, 0.85);
       backdrop-filter: blur(10px);
       z-index: 1000;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
+    /* Bi-color horizontal logo: MAS | Machine Adjacent Systems */
     .top-nav-logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
       text-decoration: none;
+      color: #ffffff;
+    }
+
+    .logo-mas-inline {
+      font-size: 1.85rem;
+      font-weight: 800;
       letter-spacing: -0.02em;
+      color: #ffffff;
+    }
+
+    .logo-divider {
+      font-size: 1.5rem;
+      color: rgba(255, 255, 255, 0.25);
+      font-weight: 300;
+    }
+
+    .logo-full-inline {
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: #ffffff;
+    }
+
+    .logo-accent {
+      color: #b91c1c;
     }
 
     .top-nav-links {
@@ -76,19 +92,19 @@
     }
 
     .top-nav-cta {
-      padding: 0.75rem 1.5rem;
-      background: rgba(80, 120, 180, 0.2);
-      border: 1px solid rgba(80, 120, 180, 0.4);
-      color: #ffffff;
+      padding: 0.6rem 1.25rem;
+      background: #000;
+      color: #b91c1c;
       text-decoration: none;
       font-size: 0.95rem;
+      font-weight: 700;
       border-radius: 4px;
       transition: all 0.2s;
     }
 
     .top-nav-cta:hover {
-      background: rgba(80, 120, 180, 0.3);
-      border-color: rgba(80, 120, 180, 0.6);
+      background: #1a1a1a;
+      color: #dc2626;
     }
 
     /* Hero content */
@@ -102,14 +118,18 @@
     .hero-headline {
       font-size: 4rem;
       font-weight: 700;
-      line-height: 1.15;
+      line-height: 1.1;
       color: #ffffff;
       margin-bottom: 2rem;
       letter-spacing: -0.03em;
     }
 
+    .hero-headline-accent {
+      color: #b91c1c;
+    }
+
     .hero-subheadline {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       line-height: 1.6;
       color: rgba(255, 255, 255, 0.7);
       max-width: 900px;
@@ -125,29 +145,31 @@
     }
 
     .hero-cta-primary {
-      padding: 1.25rem 2.5rem;
-      background: rgba(80, 120, 180, 0.9);
-      color: #ffffff;
+      padding: 1.1rem 2.25rem;
+      background: #000;
+      color: #b91c1c;
       text-decoration: none;
-      font-size: 1.1rem;
-      font-weight: 600;
+      font-size: 1.05rem;
+      font-weight: 700;
       border-radius: 6px;
       transition: all 0.3s;
-      border: 2px solid rgba(80, 120, 180, 0.9);
+      border: 2px solid #000;
     }
 
     .hero-cta-primary:hover {
-      background: rgba(80, 120, 180, 1);
+      background: #1a1a1a;
+      color: #dc2626;
+      border-color: #1a1a1a;
       transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(80, 120, 180, 0.3);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
 
     .hero-cta-secondary {
-      padding: 1.25rem 2.5rem;
+      padding: 1.1rem 2.25rem;
       background: transparent;
-      color: rgba(255, 255, 255, 0.9);
+      color: #ffffff;
       text-decoration: none;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-weight: 600;
       border-radius: 6px;
       transition: all 0.3s;
@@ -173,6 +195,13 @@
       font-size: 0.85rem;
       text-transform: uppercase;
       letter-spacing: 0.1em;
+      text-decoration: none;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .scroll-indicator:hover {
+      color: rgba(255, 255, 255, 0.8);
     }
 
     .scroll-arrow {
@@ -190,45 +219,148 @@
       60% { transform: translateY(4px) rotate(-45deg); }
     }
 
-    /* Content section */
+    /* Content section base */
     .content-section {
-      padding: 8rem 3rem;
+      padding: 4rem 3rem;
       max-width: 1200px;
       margin: 0 auto;
-      background: #0a0a0a;
+      background: #1a1a1a;
     }
 
-    .content-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 3rem;
-      margin-top: 4rem;
+    .content-section-header {
+      margin-bottom: 2.5rem;
+      max-width: 800px;
     }
 
-    .content-card {
-      padding: 2.5rem;
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      border-radius: 8px;
-      transition: all 0.3s;
-    }
-
-    .content-card:hover {
-      background: rgba(255, 255, 255, 0.04);
-      border-color: rgba(80, 120, 180, 0.3);
-      transform: translateY(-4px);
-    }
-
-    .content-card-title {
-      font-size: 1.5rem;
+    .content-section-title {
+      font-size: 2.5rem;
       font-weight: 700;
       color: #ffffff;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .content-section-intro {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* Products grid: featured (2fr) + secondary (1fr) */
+    .products-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2.5rem;
+    }
+
+    .product-card {
+      padding: 2.5rem;
+      border-radius: 8px;
+      transition: all 0.3s;
+      display: flex;
+      flex-direction: column;
+      background: #2a2a2a;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .product-card-featured {
+      background: #2a2a2a;
+      border: 1px solid rgba(185, 28, 28, 0.3);
+      padding: 3rem;
+      box-shadow: 0 4px 16px rgba(255, 255, 255, 0.04);
+    }
+
+    .product-card-featured:hover {
+      border-color: rgba(185, 28, 28, 0.5);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(255, 255, 255, 0.06);
+    }
+
+    .product-card-secondary {
+      background: #2a2a2a;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .product-card-secondary:hover {
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(255, 255, 255, 0.04);
+    }
+
+    .product-card-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #b91c1c;
       margin-bottom: 1rem;
     }
 
-    .content-card-text {
-      color: rgba(255, 255, 255, 0.6);
+    .product-card-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    .product-card-secondary .product-card-title {
+      font-size: 1.5rem;
+    }
+
+    .product-card-tagline {
+      font-size: 1.1rem;
+      color: #ffffff;
+      margin-bottom: 1.25rem;
+      font-weight: 500;
+    }
+
+    .product-card-secondary .product-card-tagline {
+      font-size: 1rem;
+    }
+
+    .product-card-description {
+      font-size: 1rem;
       line-height: 1.7;
+      color: rgba(255, 255, 255, 0.65);
+      margin-bottom: 2rem;
+      flex-grow: 1;
+    }
+
+    .product-card-cta {
+      display: inline-block;
+      color: #b91c1c;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: color 0.2s;
+      margin-top: auto;
+    }
+
+    .product-card-cta:hover {
+      color: #991818;
+    }
+
+    /* Founder video section */
+    .content-founder {
+      background: #1a1a1a;
+    }
+
+    .video-embed-wrapper {
+      max-width: 900px;
+      margin: 2rem auto 0;
+      aspect-ratio: 16/9;
+      background: #000000;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    .video-embed {
+      width: 100%;
+      height: 100%;
+      border: 0;
     }
 
     /* Responsive */
@@ -238,7 +370,7 @@
       }
 
       .hero-subheadline {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
 
       .hero-cta-group {
@@ -246,15 +378,40 @@
       }
 
       .top-nav {
-        padding: 1rem 1.5rem;
+        padding: 1rem 1.25rem;
       }
 
       .top-nav-links {
-        gap: 1rem;
+        gap: 0.75rem;
+      }
+
+      .logo-full-inline {
+        display: none;
+      }
+
+      .logo-divider {
+        display: none;
       }
 
       .content-section {
         padding: 4rem 1.5rem;
+      }
+
+      .content-section-title {
+        font-size: 1.75rem;
+      }
+
+      .products-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .product-card-featured {
+        padding: 2rem;
+      }
+
+      .product-card-title {
+        font-size: 1.5rem;
       }
     }
   </style>
@@ -262,7 +419,11 @@
 <body>
   <!-- Top Navigation -->
   <nav class="top-nav">
-    <a href="index.html" class="top-nav-logo">Machine Adjacent Systems</a>
+    <a href="index.html" class="top-nav-logo">
+      <span class="logo-mas-inline">M<span class="logo-accent">AS</span></span>
+      <span class="logo-divider">|</span>
+      <span class="logo-full-inline">Machine <span class="logo-accent">Adjacent Systems</span></span>
+    </a>
     <div class="top-nav-links">
       <a href="products/mycode.html" class="top-nav-link">Products</a>
       <a href="explained.html" class="top-nav-link">Explained</a>
@@ -274,57 +435,74 @@
   <section class="hero-fullscreen">
     <div class="hero-content">
       <h1 class="hero-headline">
-        Analytical frameworks and developer tools for complex systems
+        Verification frameworks for high-stakes systems.
       </h1>
       <p class="hero-subheadline">
-        Developer tools and analytical frameworks for complex systems.
+        Evidence-grounded analysis frameworks for systems where claim and performance verification are mission-critical.
       </p>
       <div class="hero-cta-group">
-        <a href="products/mycode.html" class="hero-cta-primary">Explore Products</a>
-        <a href="explained.html" class="hero-cta-secondary">Learn More</a>
+        <a href="products/mycode.html" class="hero-cta-primary">See <span class="name-primary">my</span><span class="name-accent">Code</span></a>
+        <a href="explained.html" class="hero-cta-secondary">Read our thesis</a>
       </div>
     </div>
 
-    <div class="scroll-indicator">
+    <a href="#products-section" class="scroll-indicator">
       <span>Scroll to explore</span>
       <div class="scroll-arrow"></div>
+    </a>
+  </section>
+
+  <!-- Products Section -->
+  <section class="content-section" id="products-section">
+    <div class="content-section-header">
+      <h2 class="content-section-title">Products</h2>
+      <p class="content-section-intro">
+        We build verification frameworks for two domains where claims must be rigorously grounded: AI-generated software and innovation assessment.
+      </p>
+    </div>
+
+    <div class="products-grid">
+      <!-- Featured: <span class="name-primary">my</span><span class="name-accent">Code</span> -->
+      <div class="product-card product-card-featured">
+        <div class="product-card-label">Featured</div>
+        <h3 class="product-card-title"><span class="name-primary">my</span><span class="name-accent">Code</span></h3>
+        <p class="product-card-tagline">Runtime verification for AI-generated code.</p>
+        <p class="product-card-description">
+          Submit a repository. Declare what it should do. <span class="name-primary">my</span><span class="name-accent">Code</span> runs runtime stress tests against your stated intent and surfaces structural correspondence with patterns from a corpus of 9,297 (and growing) production repositories — before deployment. No inflated predictions; explicit limits on what we claim.
+        </p>
+        <a href="products/mycode.html" class="product-card-cta">Explore <span class="name-primary">my</span><span class="name-accent">Code</span> →</a>
+      </div>
+
+      <!-- Secondary: <span class="name-primary">M</span><span class="name-accent">IAF</span> -->
+      <div class="product-card product-card-secondary">
+        <h3 class="product-card-title"><span class="name-primary">M</span><span class="name-accent">IAF</span></h3>
+        <p class="product-card-tagline">Military Innovation Assessment Framework.</p>
+        <p class="product-card-description">
+          Four-register analytical framework for distinguishing genuine innovation from technical modernization. Validated against 28+ historical cases.
+        </p>
+        <a href="products/miaf.html" class="product-card-cta">Explore <span class="name-primary">M</span><span class="name-accent">IAF</span> →</a>
+      </div>
     </div>
   </section>
 
-  <!-- Content Section -->
-  <section class="content-section">
-    <div class="content-grid">
-      <div class="content-card">
-        <h3 class="content-card-title">myCode</h3>
-        <p class="content-card-text">
-          Pre-deployment stress testing for AI-generated code. Submit a repo, declare your intent,
-          get a diagnostic report showing where and when it breaks.
-        </p>
-      </div>
+  <!-- Founder Intro Video Section -->
+  <section class="content-section content-founder">
+    <div class="content-section-header">
+      <h2 class="content-section-title">Why this, why now?</h2>
+      <p class="content-section-intro">
+        A short take on the conviction behind <span class="name-primary">M</span><span class="name-accent">AS</span> — and why epistemic rigor in AI tooling matters now.
+      </p>
+    </div>
 
-      <div class="content-card">
-        <h3 class="content-card-title">MIAF</h3>
-        <p class="content-card-text">
-          Military Innovation Assessment Framework. Validated against 28+ historical cases, 
-          distinguishing genuine innovation from technical modernization through four-dimensional analysis.
-        </p>
-      </div>
-
-      <div class="content-card">
-        <h3 class="content-card-title">RAA</h3>
-        <p class="content-card-text">
-          Recursive Agent Architecture. Domain-agnostic framework for stress-testing analytical 
-          conclusions through adversarial validation and recursive challenge patterns.
-        </p>
-      </div>
-
-      <div class="content-card">
-        <h3 class="content-card-title">Cognitive Ledger</h3>
-        <p class="content-card-text">
-          Systematic tracking of analytical decisions and reasoning trajectories. 
-          Maps cognitive capital transformation across organizational knowledge stacks.
-        </p>
-      </div>
+    <div class="video-embed-wrapper">
+      <!-- TODO: Replace VIDEO_ID_HERE with actual YouTube video ID after recording -->
+      <iframe class="video-embed"
+              src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+              title="Why this, why now — <span class="name-primary">Machine</span> <span class="name-accent">Adjacent Systems</span>"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+      </iframe>
     </div>
   </section>
 
