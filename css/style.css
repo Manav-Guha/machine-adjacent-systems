@@ -482,3 +482,18 @@ body {
     padding: 1.5rem;
   }
 }
+
+/* Brand consistency rules — MAS logo and product names must ALWAYS be bold and non-italic */
+.name-primary,
+.name-accent,
+.logo-accent {
+  font-weight: 700 !important;
+  font-style: normal !important;
+}
+
+.logo-mas,
+.logo-mas-inline,
+.logo-full,
+.logo-full-inline {
+  font-style: normal !important;
+}
