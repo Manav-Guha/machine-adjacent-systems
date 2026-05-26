@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analytical Frameworks Explained — Machine Adjacent Systems</title>
+  <meta name="description" content="The thinking behind our verification frameworks: evidence over inference, declarative discipline, explicit epistemic limits.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .explained-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .explained-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 2rem;
+      border-radius: 8px;
+      transition: border-color 0.3s;
+    }
+
+    .explained-card:hover {
+      border-color: var(--accent-red);
+    }
+
+    .explained-number {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .explained-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+      color: var(--text-primary);
+    }
+
+    .explained-description {
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 1024px) {
+      .explained-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <a href="index.html" class="logo">
+          <span class="logo-mas">M<span class="logo-accent">AS</span></span>
+          <span class="logo-divider">|</span>
+          <span class="logo-full">Machine <span class="logo-accent">Adjacent Systems</span></span>
+        </a>
+      </div>
+
+      <div class="nav-section">
+        <h2 class="nav-title">Products</h2>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="products/mycode.html" class="nav-link"><span class="name-primary">my</span><span class="name-accent">Code</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="products/miaf.html" class="nav-link"><span class="name-primary">M</span><span class="name-accent">IAF</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="explained.html" class="nav-link">Analytical Frameworks Explained</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="hero">
+        <h1 class="hero-title">Analytical Frameworks Explained</h1>
+        <p class="hero-description">
+          How we think about verification, evidence, and the discipline of refusing to overclaim.
+        </p>
+      </header>
+
+      <!-- Explained Cards -->
+      <section class="section">
+        <div class="explained-grid">
+          <!-- Card #1: The <span class="name-primary">M</span><span class="name-accent">AS</span> Thesis -->
+          <article class="explained-card">
+            <div class="explained-number">Analytical Frameworks Explained, #1</div>
+            <h2 class="explained-title">The <span class="name-primary">M</span><span class="name-accent">AS</span> Thesis: Evidence Over Inference</h2>
+            <p class="explained-description">
+              The AI tooling industry generates output faster than it verifies it. Code without runtime verification. Frameworks without grounding in evidence. Predictions presented as certainties.
+            </p>
+            <p class="explained-description">
+              <span class="name-primary">Machine</span> <span class="name-accent">Adjacent Systems</span> builds the inverse: verification frameworks where evidence anchors every statement, and the boundaries of what can legitimately be claimed are made explicit.
+            </p>
+            <p class="explained-description">
+              Two products, one discipline. For AI-generated software (<span class="name-primary">my</span><span class="name-accent">Code</span>): operational tests with corpus correspondence from 9,297 structured runtime-analysis reports over public repositories. For military innovation assessment (<span class="name-primary">M</span><span class="name-accent">IAF</span>): structured human scoring with adversarial AI challenge against 28+ validated historical cases.
+            </p>
+            <p class="explained-description">
+              Different domains. Same epistemic stance: evidence-based declarative statements about behaviour under specific conditions. Not claims. Not predictions.
+            </p>
+          </article>
+
+          <!-- Card #2: Runtime Verification (<span class="name-primary">my</span><span class="name-accent">Code</span>) -->
+          <article class="explained-card">
+            <div class="explained-number">Analytical Frameworks Explained, #2</div>
+            <h2 class="explained-title">Runtime Verification: What <span class="name-primary">my</span><span class="name-accent">Code</span> Actually Does</h2>
+            <p class="explained-description">
+              AI-generated code arrives without runtime guarantees. The model that produced it had no obligation to verify that the code behaves as intended, handles edge cases, scales under load, or matches the developer's stated purpose.
+            </p>
+            <p class="explained-description">
+              <span class="name-primary">my</span><span class="name-accent">Code</span> runs the verification the model didn't.
+            </p>
+            <p class="explained-description">
+              Submit a repository. Declare what the code should do. <span class="name-primary">my</span><span class="name-accent">Code</span> executes operational tests against your stated intent. Where the tests fail, the diagnostic report shows where, when, and how. Where structural patterns in your code correspond to patterns from a corpus of 9,297 structured runtime-analysis reports over public repositories that historically encountered failure modes, the corpus model surfaces that correspondence.
+            </p>
+            <p class="explained-description">
+              This is what we mean by verification: not a guess about what might happen, but observation of what does happen — under declared conditions, against a corpus of what has happened before.
+            </p>
+          </article>
+
+          <!-- Card #3: Corpus Correspondence vs Prediction -->
+          <article class="explained-card">
+            <div class="explained-number">Analytical Frameworks Explained, #3</div>
+            <h2 class="explained-title">Corpus Correspondence vs Prediction: The Epistemic Discipline</h2>
+            <p class="explained-description">
+              Machine learning models are increasingly deployed to make predictions about software behaviour — to forecast failures, estimate quality, project performance. The pattern is statistically appealing and epistemically dangerous.
+            </p>
+            <p class="explained-description">
+              A model trained on historical software cannot legitimately predict what your specific code will do in production. It can identify structural correspondences between your code and patterns observed in the training data. The difference is substantive, not semantic.
+            </p>
+            <p class="explained-description">
+              <span class="name-primary">my</span><span class="name-accent">Code</span>'s corpus model surfaces structural correspondences. The classifier learns to distinguish failure-prone structural patterns from baseline within its training corpus. What this means in practice: when your code structurally resembles repositories where similar structures historically encountered specific failure modes, the model says so.
+            </p>
+            <p class="explained-description">
+              What it does not mean: that your specific project will encounter those failure modes. The corpus correspondence is real and measurable. The prediction that often follows from such correspondence is an inferential leap the data does not support.
+            </p>
+            <p class="explained-description">
+              We make evidence-based declarative statements about your project's current and prospective behaviour under specific conditions. Not claims. Not predictions. The discipline of refusing to overclaim is the differentiation.
+            </p>
+          </article>
+
+          <!-- Card #4: <span class="name-primary">M</span><span class="name-accent">IAF</span> — Same Discipline, Different Domain -->
+          <article class="explained-card">
+            <div class="explained-number">Analytical Frameworks Explained, #4</div>
+            <h2 class="explained-title"><span class="name-primary">M</span><span class="name-accent">IAF</span>: Same Discipline, Different Domain</h2>
+            <p class="explained-description">
+              The Military Innovation Assessment Framework applies the same epistemic discipline to a different domain: distinguishing genuine military innovation from technical modernization.
+            </p>
+            <p class="explained-description">
+              Four analytical registers — Conceptual, Irreversibility, Disruption, Generative — score how an innovation restructures conceptualization, creates path dependencies, alters competitive dynamics, and enables new capabilities. The PPTO stack (People, Process, Technology, Organization) maps where these effects concentrate within institutions.
+            </p>
+            <p class="explained-description">
+              The framework is human-scored. An adversarial AI agent challenges each scoring decision but is deliberately restricted from providing its own scores. The user adjudicates; the AI argues. Validated against 28+ historical cases spanning 1000 years.
+            </p>
+            <p class="explained-description">
+              Same discipline as <span class="name-primary">my</span><span class="name-accent">Code</span>: evidence-grounded discrimination, explicit limits on what the framework claims, human judgement at the centre of adjudication.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
