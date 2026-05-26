@@ -19,14 +19,17 @@
       border: 1px solid var(--border-color);
       padding: 2rem;
       border-radius: 8px;
-      transition: border-color 0.3s, transform 0.3s;
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
       display: flex;
       flex-direction: column;
+      position: relative;
+      cursor: pointer;
     }
 
     .position-card:hover {
       border-color: var(--accent-red);
       transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
     }
 
     .position-number {
@@ -53,18 +56,41 @@
       flex-grow: 1;
     }
 
-    .position-link {
-      display: inline-block;
-      color: var(--accent-red);
+    .position-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.7rem 1.5rem;
+      background: transparent;
+      color: #ffffff;
       text-decoration: none;
       font-size: 0.95rem;
-      font-weight: 600;
-      transition: color 0.2s;
+      font-weight: 700;
+      border: 1.5px solid rgba(255, 255, 255, 0.3);
+      border-radius: 6px;
+      transition: background 0.2s, border-color 0.2s;
       margin-top: auto;
+      align-self: flex-start;
+      position: relative;
+      z-index: 2;
     }
 
-    .position-link:hover {
-      color: var(--accent-red-hover);
+    .position-button:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.6);
+      color: #ffffff;
+    }
+
+    /* Stretched-link pattern: the button's ::after pseudo-element
+       absolutely positions to cover the entire .position-card,
+       making the whole card clickable. */
+    .position-button::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
     }
 
     @media (max-width: 1024px) {
@@ -134,18 +160,18 @@
             <div class="position-number">Strategic Position, #1</div>
             <h2 class="position-title">The Verification Problem in the Age of AI-Generated Software</h2>
             <p class="position-description">
-              Software generation is scaling exponentially faster than software verification. Most existing tooling attempts to solve this using the same generative logic that produced it — collapsing verification into self-consistency checking rather than operational correspondence with reality. The strategic thesis behind Machine Adjacent Systems and <span class="name-primary">my</span><span class="name-accent">Code</span>.
+              Software generation is scaling exponentially faster than software verification. Most existing tooling attempts to solve this using the same generative logic that produced it — collapsing verification into self-consistency checking rather than operational correspondence with reality. The strategic thesis behind <span class="name-primary">Machine</span> <span class="name-accent">Adjacent Systems</span> and <span class="name-primary">my</span><span class="name-accent">Code</span>.
             </p>
-            <a href="verification-problem.html" class="position-link">Read the position →</a>
+            <a href="verification-problem.html" class="position-button">Learn More</a>
           </article>
 
           <article class="position-card">
             <div class="position-number">Strategic Position, #2</div>
             <h2 class="position-title">Analytical Frameworks Explained</h2>
             <p class="position-description">
-              How we think about verification, evidence, and the discipline of refusing to overclaim. The MAS thesis on evidence over inference, runtime verification, corpus correspondence vs prediction, and the same epistemic discipline applied across <span class="name-primary">my</span><span class="name-accent">Code</span> and <span class="name-primary">M</span><span class="name-accent">IAF</span>.
+              How we think about verification, evidence, and the discipline of refusing to overclaim. The <span class="name-primary">M</span><span class="name-accent">AS</span> thesis on evidence over inference, runtime verification, corpus correspondence vs prediction, and the same epistemic discipline applied across <span class="name-primary">my</span><span class="name-accent">Code</span> and <span class="name-primary">M</span><span class="name-accent">IAF</span>.
             </p>
-            <a href="analytical-frameworks.html" class="position-link">Read the position →</a>
+            <a href="analytical-frameworks.html" class="position-button">Learn More</a>
           </article>
         </div>
       </section>
