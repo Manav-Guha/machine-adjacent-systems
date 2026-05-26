@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Verification Problem in the Age of AI-Generated Software — Machine Adjacent Systems</title>
+  <meta name="description" content="The strategic thesis behind Machine Adjacent Systems and myCode: software generation is scaling faster than verification, and the response cannot use the same generative logic that produced the problem.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .article-body {
+      max-width: 760px;
+    }
+
+    .article-intro {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border-color);
+      font-style: italic;
+    }
+
+    .article-paragraph {
+      color: var(--text-secondary);
+      line-height: 1.8;
+      font-size: 1.05rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .article-emphasis {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    .article-list {
+      list-style: none;
+      margin: 1rem 0 2rem 0.5rem;
+    }
+
+    .article-list li {
+      color: var(--text-secondary);
+      line-height: 1.8;
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .article-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent-red);
+    }
+
+    .article-list-numbered {
+      list-style: none;
+      counter-reset: position-counter;
+      margin: 1rem 0 2rem 0;
+    }
+
+    .article-list-numbered li {
+      color: var(--text-primary);
+      line-height: 1.8;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      padding-left: 2.5rem;
+      position: relative;
+      counter-increment: position-counter;
+      font-weight: 500;
+    }
+
+    .article-list-numbered li::before {
+      content: counter(position-counter) ".";
+      position: absolute;
+      left: 0.5rem;
+      color: var(--accent-red);
+      font-weight: 700;
+    }
+
+    .article-callout {
+      color: var(--text-primary);
+      font-size: 1.15rem;
+      line-height: 1.6;
+      padding: 0.5rem 0 0.5rem 1.5rem;
+      border-left: 3px solid var(--accent-red);
+      margin: 2rem 0;
+      font-weight: 500;
+    }
+
+    .article-historical-list {
+      list-style: none;
+      margin: 1rem 0 2rem 0.5rem;
+    }
+
+    .article-historical-list li {
+      color: var(--text-secondary);
+      line-height: 1.8;
+      font-size: 1.05rem;
+      margin-bottom: 0.25rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .article-historical-list li::before {
+      content: '·';
+      position: absolute;
+      left: 0.5rem;
+      color: var(--accent-red);
+      font-weight: 700;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover {
+      color: var(--text-primary);
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <a href="index.html" class="logo">
+          <span class="logo-mas">M<span class="logo-accent">AS</span></span>
+          <span class="logo-divider">|</span>
+          <span class="logo-full">Machine <span class="logo-accent">Adjacent Systems</span></span>
+        </a>
+      </div>
+
+      <div class="nav-section">
+        <h2 class="nav-title">Products</h2>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="products/mycode.html" class="nav-link"><span class="name-primary">my</span><span class="name-accent">Code</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="products/miaf.html" class="nav-link"><span class="name-primary">M</span><span class="name-accent">IAF</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="strategic-positions.html" class="nav-link active">Our <span class="name-accent">Thinking</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="hero">
+        <h1 class="hero-title">The Verification Problem in the Age of AI-Generated Software</h1>
+        <p class="hero-description">
+          The strategic thesis behind Machine Adjacent Systems and <span class="name-primary">my</span><span class="name-accent">Code</span>.
+        </p>
+      </header>
+
+      <section class="section article-body">
+        <p class="article-intro">
+          What follows is the underlying strategic thesis behind Machine Adjacent Systems and <span class="name-primary">my</span><span class="name-accent">Code</span>.
+        </p>
+
+        <p class="article-paragraph">
+          Software generation is undergoing a structural acceleration event. Over the past several years, AI-assisted development has dramatically reduced the cost, skill threshold, and time required to produce deployable software. Historically, software generation was constrained by human throughput: even offshore scaling models still preserved a meaningful temporal gap between upstream code production and downstream deployment. That gap created space for review, correction, and organisational intervention before operational failures multiplied.
+        </p>
+
+        <p class="article-paragraph">
+          <span class="article-emphasis">AI coding agents compress that gap.</span>
+        </p>
+
+        <p class="article-paragraph">
+          The result is not merely "more code," but the collapse of the traditional separation between generation, deployment, and operational exposure. Generated software can now move into production environments at a speed that increasingly outpaces conventional verification workflows. This creates a structural asymmetry: software generation is scaling exponentially faster than software verification.
+        </p>
+
+        <p class="article-paragraph">
+          Most existing tooling attempts to solve this problem using the same ontological logic that produced it. AI systems generate code, then AI systems review the same code using inference-based reasoning over syntax, style, or semantic plausibility. But systems built from the same generative assumptions tend to inherit the same blind spots. Verification collapses into self-consistency checking rather than operational correspondence with reality.
+        </p>
+
+        <div class="article-callout">
+          Machine Adjacent Systems is built around a different premise: verification must remain operationally distinct from generation.
+        </div>
+
+        <p class="article-paragraph">
+          This distinction is not merely technical but architectural. A coding system optimises for completion, coherence, and successful synthesis. A verification system must optimise for stress, contradiction, degradation, instability, and failure under conditions. The two systems may share the same computational substrate, but they must inhabit different operational relations to software itself.
+        </p>
+
+        <p class="article-paragraph">
+          This is why <span class="name-primary">my</span><span class="name-accent">Code</span> focuses on runtime execution rather than inference alone. The system is designed around:
+        </p>
+
+        <ul class="article-list">
+          <li>operational stress-testing,</li>
+          <li>runtime correspondence,</li>
+          <li>deterministic failure classification,</li>
+          <li>deployment-context analysis,</li>
+          <li>and evidentiary fidelity grounded in measured behaviour rather than persuasive explanation.</li>
+        </ul>
+
+        <p class="article-paragraph">
+          The goal is not to slow software generation, but to make acceleration sustainable.
+        </p>
+
+        <p class="article-paragraph">
+          Historically, stabilisation layers emerge after acceleration layers:
+        </p>
+
+        <ul class="article-historical-list">
+          <li>observability after cloud,</li>
+          <li>cybersecurity after networking,</li>
+          <li>air defence after airpower,</li>
+          <li>runtime telemetry after distributed systems.</li>
+        </ul>
+
+        <div class="article-callout">
+          <span class="name-primary">my</span><span class="name-accent">Code</span> is positioned as a stabilisation layer for AI-generated software systems.
+        </div>
+
+        <p class="article-paragraph">
+          This is particularly relevant in environments where operational continuity matters more than demo fluency. Governments, enterprises, regulated industries, and AI-native infrastructure systems increasingly depend on software that cannot simply "mostly work." As states and organisations move toward AI-enabled public services and operational automation, three problems become strategically central:
+        </p>
+
+        <ol class="article-list-numbered">
+          <li>Code correctness</li>
+          <li>Deployment fidelity</li>
+          <li>Runtime smoothness under real-world conditions</li>
+        </ol>
+
+        <p class="article-paragraph">
+          Most current AI tooling addresses the first problem weakly and the latter two barely at all.
+        </p>
+
+        <p class="article-paragraph">
+          <span class="name-primary">my</span><span class="name-accent">Code</span> is designed around the assumption that the next major infrastructure requirement in AI-enabled software ecosystems will not merely be faster generation, but runtime-operational verification integrated directly into the development and deployment lifecycle.
+        </p>
+
+        <p class="article-paragraph">
+          The long-term vision is therefore not post-hoc testing as bureaucratic friction. It is continuous operational verification as an accelerant: a runtime-aware verification layer embedded into AI-native software workflows, enabling organisations to move faster with greater operational confidence rather than slower through procedural caution.
+        </p>
+
+        <p class="article-paragraph">
+          <span class="name-primary">Machine</span> <span class="name-accent">Adjacent Systems</span> approaches this problem from an unusual intersection of strategic systems thinking, verification-oriented engineering, and human-machine operational research. The company's thesis is that as AI-generated software becomes infrastructural, verification itself becomes infrastructural — and that operational trust in AI systems will increasingly depend not on persuasive outputs, but on measurable correspondence with runtime reality.
+        </p>
+
+        <a href="strategic-positions.html" class="back-link">← Back to Strategic Positions</a>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
