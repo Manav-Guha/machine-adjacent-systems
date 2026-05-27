@@ -246,10 +246,10 @@
       color: rgba(255, 255, 255, 0.7);
     }
 
-    /* Products grid: featured (2fr) + secondary (1fr) */
+    /* Products grid: single column (was 2fr 1fr) */
     .products-grid {
       display: grid;
-      grid-template-columns: 2fr 1fr;
+      grid-template-columns: 1fr;
       gap: 2.5rem;
     }
 
@@ -276,17 +276,6 @@
       box-shadow: 0 8px 24px rgba(255, 255, 255, 0.06);
     }
 
-    .product-card-secondary {
-      background: #2a2a2a;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .product-card-secondary:hover {
-      border-color: rgba(255, 255, 255, 0.2);
-      transform: translateY(-4px);
-      box-shadow: 0 8px 24px rgba(255, 255, 255, 0.04);
-    }
-
     .product-card-label {
       font-size: 0.75rem;
       font-weight: 600;
@@ -304,19 +293,11 @@
       letter-spacing: -0.02em;
     }
 
-    .product-card-secondary .product-card-title {
-      font-size: 1.5rem;
-    }
-
     .product-card-tagline {
       font-size: 1.1rem;
       color: #ffffff;
       margin-bottom: 1.25rem;
       font-weight: 500;
-    }
-
-    .product-card-secondary .product-card-tagline {
-      font-size: 1rem;
     }
 
     .product-card-description {
@@ -382,7 +363,16 @@
       }
 
       .top-nav-links {
-        gap: 0.75rem;
+        gap: 0.85rem;
+      }
+
+      .top-nav-link {
+        font-size: 0.85rem;
+      }
+
+      .top-nav-cta {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
       }
 
       .logo-full-inline {
@@ -425,7 +415,8 @@
       <span class="logo-full-inline">Machine <span class="logo-accent">Adjacent Systems</span></span>
     </a>
     <div class="top-nav-links">
-      <a href="products/mycode.html" class="top-nav-link">Products</a>
+      <a href="products/mycode.html" class="top-nav-link"><span class="name-primary">my</span><span class="name-accent">Code</span></a>
+      <a href="experimental-work.html" class="top-nav-link">Adjacent <span class="name-accent">Experiments</span></a>
       <a href="strategic-positions.html" class="top-nav-link">Our <span class="name-accent">Thinking</span></a>
       <a href="contact.html" class="top-nav-cta">Contact</a>
     </div>
@@ -457,30 +448,19 @@
     <div class="content-section-header">
       <h2 class="content-section-title">Products</h2>
       <p class="content-section-intro">
-        We build verification frameworks for two domains where claims must be rigorously grounded: AI-generated software and innovation assessment.
+        We build verification frameworks for systems where claims must be rigorously grounded.
       </p>
     </div>
 
     <div class="products-grid">
-      <!-- Featured: myCode -->
+      <!-- myCode (now full width, single product) -->
       <div class="product-card product-card-featured">
-        <div class="product-card-label">Featured</div>
         <h3 class="product-card-title"><span class="name-primary">my</span><span class="name-accent">Code</span></h3>
         <p class="product-card-tagline">Runtime verification for AI-generated software.</p>
         <p class="product-card-description">
           Submit a repository. Declare what it should do. <span class="name-primary">my</span><span class="name-accent">Code</span> runs operational tests against your stated intent and surfaces structural correspondence with patterns from a corpus of 9,297 structured runtime-analysis reports over public repositories — before deployment. No inflated predictions; explicit limits on what we claim.
         </p>
         <a href="products/mycode.html" class="product-card-cta">Explore <span class="name-primary">my</span><span class="name-accent">Code</span> →</a>
-      </div>
-
-      <!-- Secondary: MIAF -->
-      <div class="product-card product-card-secondary">
-        <h3 class="product-card-title"><span class="name-primary">M</span><span class="name-accent">IAF</span></h3>
-        <p class="product-card-tagline">Military Innovation Assessment Framework.</p>
-        <p class="product-card-description">
-          Four-register analytical framework for distinguishing genuine innovation from technical modernization. Validated against 28+ historical cases.
-        </p>
-        <a href="products/miaf.html" class="product-card-cta">Explore <span class="name-primary">M</span><span class="name-accent">IAF</span> →</a>
       </div>
     </div>
   </section>
