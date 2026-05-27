@@ -3,10 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MIAF — Military Innovation Assessment Framework | Machine Adjacent Systems</title>
-  <meta name="description" content="A four-register analytical framework for distinguishing genuine military innovation from technical modernization. Human-led scoring with adversarial AI challenge. Validated against 28+ historical cases spanning 1000 years.">
-  <link rel="stylesheet" href="../css/style.css">
+  <title>Adjacent Experiments — Military Innovation Assessment Framework (MIAF) | Machine Adjacent Systems</title>
+  <meta name="description" content="Adjacent Experiments at Machine Adjacent Systems. Current project: the Military Innovation Assessment Framework (MIAF) — a four-register analytical framework for distinguishing genuine military innovation from technical modernization. Human-led scoring with adversarial AI challenge. Validated against 28+ historical cases spanning 1000 years.">
+  <link rel="stylesheet" href="css/style.css">
   <style>
+    /* Hero kicker (small uppercase label above the H1) */
+    .hero-kicker {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
     /* Grid-based layout */
     .content-wrapper {
       display: grid;
@@ -152,6 +162,17 @@
       line-height: 1.6;
       font-style: italic;
     }
+
+    /* Clickable nav title (for "Our Thinking" section header) */
+    .nav-title-link {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-title-link:hover {
+      color: var(--accent-red);
+    }
   </style>
 </head>
 <body>
@@ -166,44 +187,61 @@
 
     <nav class="sidebar">
       <div class="sidebar-header">
-        <a href="../index.html" class="logo">
+        <a href="index.html" class="logo">
           <span class="logo-mas">M<span class="logo-accent">AS</span></span>
           <span class="logo-divider">|</span>
           <span class="logo-full">Machine <span class="logo-accent">Adjacent Systems</span></span>
         </a>
       </div>
 
-      <div class="nav-section-collapsible">
-        <div class="nav-section-header">
-          <h2 class="nav-title">Products</h2>
-          <span class="nav-collapse-icon">▼</span>
-        </div>
-        <div class="nav-submenu-container">
-          <ul class="nav-list">
-            <li class="nav-item"><a href="mycode.html" class="nav-link"><span class="name-primary">my</span><span class="name-accent">Code</span></a></li>
-            <li class="nav-item"><a href="miaf.html" class="nav-link"><span class="name-primary">M</span><span class="name-accent">IAF</span></a></li>
-          </ul>
-        </div>
+      <div class="nav-section">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="products/mycode.html" class="nav-link"><span class="name-primary">my</span><span class="name-accent">Code</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="experimental-work.html" class="nav-link active">Adjacent <span class="name-accent">Experiments</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <h2 class="nav-title">
+          <a href="strategic-positions.html" class="nav-title-link">Our <span class="name-accent">Thinking</span></a>
+        </h2>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="abu-dhabi-connection.html" class="nav-link">The Abu Dhabi Connection</a>
+          </li>
+          <li class="nav-item">
+            <a href="verification-problem.html" class="nav-link">The Verification Problem</a>
+          </li>
+          <li class="nav-item">
+            <a href="analytical-frameworks.html" class="nav-link">Analytical Frameworks Explained</a>
+          </li>
+        </ul>
       </div>
 
       <div class="nav-section">
         <ul class="nav-list">
-          <li class="nav-item"><a href="../strategic-positions.html" class="nav-link">Our <span class="name-accent">Thinking</span></a></li>
-          <li class="nav-item"><a href="../contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
         </ul>
       </div>
     </nav>
 
     <main class="main-content">
       <header class="hero">
-        <h1 class="hero-title"><span class="name-primary">M</span><span class="name-accent">IAF</span></h1>
+        <p class="hero-kicker">Adjacent <span class="name-accent">Experiments</span></p>
+        <h1 class="hero-title"><span class="name-primary">Military</span> <span class="name-accent">Innovation Assessment Framework</span> (<span class="name-primary">M</span><span class="name-accent">IAF</span>)</h1>
         <p class="hero-subtitle">A four-register analytical framework for distinguishing genuine military innovation from technical modernization. Human-led scoring with adversarial AI challenge. Validated against 28+ historical cases spanning 1000 years.</p>
       </header>
 
       <div class="content-wrapper">
         <!-- Top row: Visualization and Tool -->
         <div class="viz-box">
-          <img src="../assets/miaf-surface.png" alt="MIAF Register × PPTO Surface" style="width: 100%; height: 100%; object-fit: contain;">
+          <img src="assets/miaf-surface.png" alt="MIAF Register × PPTO Surface" style="width: 100%; height: 100%; object-fit: contain;">
         </div>
 
         <div class="content-box tool-box" style="grid-column: 3; grid-row: 1;">
@@ -249,9 +287,9 @@
           <p class="discipline-note">Validation is against the historical corpus. <span class="name-primary">M</span><span class="name-accent">IAF</span> produces evidence-grounded analytical discriminations within the framework — not predictions of any particular innovation's strategic future.</p>
         </div>
 
-        <!-- Applications -->
+        <!-- Projected Application Areas -->
         <div class="content-box applications-box">
-          <h3>Applications</h3>
+          <h3>Projected Application Areas</h3>
           <div class="applications-grid">
             <div class="app-card">
               <h4>Defense Assessment</h4>
@@ -275,6 +313,6 @@
     </main>
   </div>
 
-  <script src="../js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
