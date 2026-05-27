@@ -4,11 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Verification Problem in the Age of AI-Generated Software — Machine Adjacent Systems</title>
-  <meta name="description" content="The strategic thesis underwriting the architecture of myCode: software generation is scaling faster than verification, and the response cannot use the same generative logic that produced the problem.">
+  <meta name="description" content="A Strategic Position from Machine Adjacent Systems: software generation now scales far faster than verification, and the response cannot use the same generative logic that produced the problem.">
   <link rel="stylesheet" href="css/style.css">
   <style>
     .article-body {
       max-width: 760px;
+    }
+
+    .article-breadcrumb {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      font-weight: 600;
+    }
+
+    .article-breadcrumb-separator {
+      color: var(--accent-red);
+      margin: 0 0.6rem;
+    }
+
+    .article-section-divider {
+      border: 0;
+      border-top: 1px solid var(--border-color);
+      margin: 3.5rem 0 2.5rem 0;
+    }
+
+    .article-section-title {
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+      margin-bottom: 1.5rem;
     }
 
     .article-paragraph {
@@ -20,7 +48,7 @@
 
     .article-emphasis {
       color: var(--text-primary);
-      font-weight: 500;
+      font-weight: 600;
     }
 
     .article-list {
@@ -44,27 +72,24 @@
       color: var(--accent-red);
     }
 
-    .article-list-numbered {
+    .article-chain-list {
       list-style: none;
-      counter-reset: position-counter;
-      margin: 1rem 0 2rem 0;
+      margin: 1.5rem 0 2rem 0;
     }
 
-    .article-list-numbered li {
-      color: var(--text-primary);
+    .article-chain-list li {
+      color: var(--text-secondary);
       line-height: 1.8;
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-      padding-left: 2.5rem;
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
       position: relative;
-      counter-increment: position-counter;
-      font-weight: 500;
     }
 
-    .article-list-numbered li::before {
-      content: counter(position-counter) ".";
+    .article-chain-list li::before {
+      content: '→';
       position: absolute;
-      left: 0.5rem;
+      left: 0;
       color: var(--accent-red);
       font-weight: 700;
     }
@@ -73,32 +98,19 @@
       color: var(--text-primary);
       font-size: 1.15rem;
       line-height: 1.6;
-      padding: 0.5rem 0 0.5rem 1.5rem;
+      padding: 0.75rem 0 0.75rem 1.5rem;
       border-left: 3px solid var(--accent-red);
       margin: 2rem 0;
       font-weight: 500;
     }
 
-    .article-historical-list {
-      list-style: none;
-      margin: 1rem 0 2rem 0.5rem;
-    }
-
-    .article-historical-list li {
-      color: var(--text-secondary);
-      line-height: 1.8;
-      font-size: 1.05rem;
-      margin-bottom: 0.25rem;
-      padding-left: 1.5rem;
-      position: relative;
-    }
-
-    .article-historical-list li::before {
-      content: '·';
-      position: absolute;
-      left: 0.5rem;
-      color: var(--accent-red);
-      font-weight: 700;
+    .article-thesis {
+      color: var(--text-primary);
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin: 1.25rem 0;
+      padding-left: 1rem;
+      border-left: 2px solid rgba(255, 255, 255, 0.2);
     }
 
     .back-link {
@@ -166,92 +178,101 @@
     <main class="main-content">
       <header class="hero">
         <h1 class="hero-title">The Verification Problem in the Age of AI-Generated Software</h1>
-        <p class="hero-description">
-          The <strong>strategic thesis</strong> underwriting the architecture of <span class="name-primary">my</span><span class="name-accent">Code</span> is as follows:
-        </p>
+        <p class="article-breadcrumb">Strategic Position<span class="article-breadcrumb-separator">|</span><span class="name-primary">Machine</span> <span class="name-accent">Adjacent Systems</span></p>
       </header>
 
       <section class="section article-body">
+        <hr class="article-section-divider">
+
+        <h2 class="article-section-title">Structural Shift</h2>
+
         <p class="article-paragraph">
-          Software generation is undergoing a structural acceleration event. Over the past several years, AI-assisted development has dramatically reduced the cost, skill threshold, and time required to produce deployable software. Historically, software generation was constrained by human throughput: even offshore scaling models still preserved a meaningful temporal gap between upstream code production and downstream deployment. That gap created space for review, correction, and organisational intervention before operational failures multiplied.
+          Software generation is undergoing a structural acceleration event. AI-assisted development has collapsed the cost, skill threshold, and time required to produce deployable software. Historically, software generation was constrained by human throughput. Even offshore scaling preserved a temporal gap between upstream code production and downstream deployment. That gap created space for review, correction, and organizational intervention before operational failures multiplied.
         </p>
 
         <p class="article-paragraph">
-          <span class="article-emphasis">AI coding agents compress that gap.</span>
+          <span class="article-emphasis">AI coding agents have eliminated that gap.</span>
         </p>
 
         <p class="article-paragraph">
-          The result is not merely "more code," but the collapse of the traditional separation between generation, deployment, and operational exposure. Generated software can now move into production environments at a speed that increasingly outpaces conventional verification workflows. This creates a structural asymmetry: software generation is scaling exponentially faster than software verification.
+          The result is not merely "more code." It is the collapse of the traditional separation between generation, deployment, and operational exposure. Generated software now moves into production at speeds that outpace conventional verification workflows. This creates a structural asymmetry: software generation is scaling far faster than software verification.
         </p>
 
+        <hr class="article-section-divider">
+
+        <h2 class="article-section-title">The Verification Gap</h2>
+
         <p class="article-paragraph">
-          Most existing tooling attempts to solve this problem using the same ontological logic that produced it. AI systems generate code, then AI systems review the same code using inference-based reasoning over syntax, style, or semantic plausibility. But systems built from the same generative assumptions tend to inherit the same blind spots. Verification collapses into self-consistency checking rather than operational correspondence with reality.
+          Most existing tooling attempts to solve this problem from within the same generative framework that produced it. AI systems generate code; AI systems review it using inference-based reasoning over syntax, style, or semantic plausibility. Systems built from the same generative assumptions inherit the same blind spots. Verification collapses into self-consistency checking rather than operational correspondence with reality.
         </p>
 
         <div class="article-callout">
-          <span class="name-primary">my</span><span class="name-accent">Code</span> is built around a different premise: verification must remain operationally distinct from generation.
+          <span class="name-primary">Machine</span> <span class="name-accent">Adjacent Systems</span>' design logic for <span class="name-primary">my</span><span class="name-accent">Code</span> is organized around a different premise: verification must remain operationally distinct from generation.
         </div>
 
         <p class="article-paragraph">
-          This distinction is not merely technical but architectural. A coding system optimises for completion, coherence, and successful synthesis. A verification system must optimise for stress, contradiction, degradation, instability, and failure under conditions. The two systems may share the same computational substrate, but they must inhabit different operational relations to software itself.
+          This distinction is architectural, not technical. A coding system optimizes for completion, coherence, and successful synthesis. A verification system must optimize for stress, contradiction, degradation, instability, and failure under conditions. The two systems may share computational substrate, but they must inhabit different operational relations to software itself.
         </p>
 
+        <hr class="article-section-divider">
+
+        <h2 class="article-section-title">Operational Architecture</h2>
+
         <p class="article-paragraph">
-          This is why <span class="name-primary">my</span><span class="name-accent">Code</span> focuses on runtime execution rather than inference alone. The system is designed around:
+          A verification system aligned with this premise must be built around runtime execution rather than inference alone. The relevant design priorities are:
         </p>
 
         <ul class="article-list">
-          <li>operational stress-testing,</li>
-          <li>runtime correspondence,</li>
-          <li>deterministic failure classification,</li>
-          <li>deployment-context analysis,</li>
-          <li>and evidentiary fidelity grounded in measured behaviour rather than persuasive explanation.</li>
+          <li>operational stress-testing</li>
+          <li>runtime correspondence</li>
+          <li>reproducible failure classification</li>
+          <li>deployment-context analysis</li>
+          <li>evidentiary fidelity grounded in measured runtime behavior rather than inference alone</li>
         </ul>
 
         <p class="article-paragraph">
-          The goal is not to slow software generation, but to make acceleration sustainable.
+          <span class="name-primary">my</span><span class="name-accent">Code</span> is not a testing tool retrofitted for AI code. It is designed from first principles against these priorities — runtime execution as the foundation, not inference.
         </p>
+
+        <hr class="article-section-divider">
+
+        <h2 class="article-section-title">The Robust Acceleration Thesis</h2>
 
         <p class="article-paragraph">
-          Historically, stabilisation layers emerge after acceleration layers:
+          Historically, acceleration cycles in technology are sustained by the emergence of integration layers that do not constrain the original capability — they extend its operational range.
         </p>
 
-        <ul class="article-historical-list">
-          <li>observability after cloud,</li>
-          <li>cybersecurity after networking,</li>
-          <li>air defence after airpower,</li>
-          <li>runtime telemetry after distributed systems.</li>
+        <ul class="article-chain-list">
+          <li>Airpower accelerates → SEAD integrates with airpower platforms → airpower becomes deployable in contested theaters with operational confidence.</li>
+          <li>Networking expands → cybersecurity integrates into network architecture → networking becomes deployable in high-trust contexts.</li>
+          <li>Cloud scales → observability integrates into cloud workflows → cloud becomes deployable in operationally critical environments.</li>
+          <li>Distributed systems proliferate → runtime telemetry integrates into operations → distributed systems become deployable in mission-critical contexts.</li>
+          <li>AI code generation accelerates → runtime verification integrates with generative workflows → AI-generated software becomes deployable in high-stakes contexts at scale.</li>
         </ul>
 
         <div class="article-callout">
-          <span class="name-primary">my</span><span class="name-accent">Code</span> is positioned as a stabilisation layer for AI-generated software systems.
+          <span class="name-primary">my</span><span class="name-accent">Code</span> is not a constraint on acceleration. It is the integration layer that extends the operational range of AI-assisted development — making code generated at velocity deployable in contexts where "mostly works" isn't acceptable.
         </div>
 
-        <p class="article-paragraph">
-          This is particularly relevant in environments where operational continuity matters more than demo fluency. Governments, enterprises, regulated industries, and AI-native infrastructure systems increasingly depend on software that cannot simply "mostly work." As states and organisations move toward AI-enabled public services and operational automation, three problems become strategically central:
-        </p>
+        <hr class="article-section-divider">
 
-        <ol class="article-list-numbered">
-          <li>Code correctness</li>
-          <li>Deployment fidelity</li>
-          <li>Runtime smoothness under real-world conditions</li>
-        </ol>
+        <h2 class="article-section-title">Category Positioning</h2>
 
         <p class="article-paragraph">
-          Most current AI tooling addresses the first problem weakly and the latter two barely at all.
+          <span class="name-primary">Machine</span> <span class="name-accent">Adjacent Systems</span> approaches this problem from an unusual intersection of strategic systems thinking, verification-oriented engineering, and human-machine operational research. This triangulation is not accidental — it is the configuration required to produce verification infrastructure both operationally rigorous and strategically legible to governments, enterprises, and regulated industries.
         </p>
 
         <p class="article-paragraph">
-          <span class="name-primary">my</span><span class="name-accent">Code</span> is designed around the assumption that the next major infrastructure requirement in AI-enabled software ecosystems will not merely be faster generation, but runtime-operational verification integrated directly into the development and deployment lifecycle.
+          The thesis is straightforward:
         </p>
 
-        <p class="article-paragraph">
-          The long-term vision is therefore not post-hoc testing as bureaucratic friction. It is continuous operational verification as an accelerant: a runtime-aware verification layer embedded into AI-native software workflows, enabling organisations to move faster with greater operational confidence rather than slower through procedural caution.
+        <p class="article-thesis">
+          As AI-generated software becomes infrastructural, verification itself becomes infrastructural. Operational trust in AI systems will increasingly depend not on persuasive outputs, but on measurable correspondence with runtime reality.
         </p>
 
-        <p class="article-paragraph">
-          <span class="name-primary">Machine</span> <span class="name-accent">Adjacent Systems</span> approaches this problem from an unusual intersection of strategic systems thinking, verification-oriented engineering, and human-machine operational research. The company's thesis is that as AI-generated software becomes infrastructural, verification itself becomes infrastructural — and that operational trust in AI systems will increasingly depend not on persuasive outputs, but on measurable correspondence with runtime reality.
-        </p>
+        <div class="article-callout">
+          <strong>This is the category <span class="name-primary">my</span><span class="name-accent">Code</span> is positioned to define and occupy.</strong>
+        </div>
 
         <a href="strategic-positions.html" class="back-link">← Back to Strategic Positions</a>
       </section>
