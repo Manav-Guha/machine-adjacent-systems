@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — Machine Adjacent Systems</title>
+  <meta name="description" content="The two-person founding team behind Machine Adjacent Systems.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+      max-width: 800px;
+    }
+
+    .about-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 2rem;
+      border-radius: 8px;
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .about-card:hover {
+      border-color: var(--accent-red);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .about-name {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+
+    .about-role {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+    }
+
+    .about-bio {
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+      font-size: 1rem;
+      flex-grow: 1;
+    }
+
+    .about-linkedin {
+      display: inline-block;
+      color: var(--accent-red);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: color 0.2s;
+      align-self: flex-start;
+    }
+
+    .about-linkedin:hover {
+      color: #dc2626;
+      text-decoration: underline;
+    }
+
+    /* Clickable nav title for "Our Thinking" section header */
+    .nav-title-link {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-title-link:hover {
+      color: var(--accent-red);
+    }
+
+    @media (max-width: 768px) {
+      .about-card {
+        padding: 1.5rem;
+      }
+      .about-name {
+        font-size: 1.4rem;
+      }
+      .about-bio {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <a href="index.html" class="logo">
+          <span class="logo-mas">M<span class="logo-accent">AS</span></span>
+          <span class="logo-divider">|</span>
+          <span class="logo-full">Machine <span class="logo-accent">Adjacent Systems</span></span>
+        </a>
+      </div>
+
+      <div class="nav-section">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="products/mycode.html" class="nav-link"><span class="name-primary">my</span><span class="name-accent">Code</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="experimental-work.html" class="nav-link">Adjacent <span class="name-accent">Experiments</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <h2 class="nav-title">
+          <a href="strategic-positions.html" class="nav-title-link">Our <span class="name-accent">Thinking</span></a>
+        </h2>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="abu-dhabi-connection.html" class="nav-link">The Abu Dhabi Connection</a>
+          </li>
+          <li class="nav-item">
+            <a href="verification-problem.html" class="nav-link">The Verification Problem</a>
+          </li>
+          <li class="nav-item">
+            <a href="analytical-frameworks.html" class="nav-link">Analytical Frameworks Explained</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="about-us.html" class="nav-link active">About <span class="name-accent">Us</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="hero">
+        <h1 class="hero-title"><span class="name-primary">About</span> <span class="name-accent">Us</span></h1>
+        <p class="hero-description">
+          <span class="name-primary">Machine</span> <span class="name-accent">Adjacent Systems</span> is a two-person founding team.
+        </p>
+      </header>
+
+      <section class="section">
+        <div class="about-grid">
+          <!-- Manav -->
+          <article class="about-card">
+            <h2 class="about-name"><span class="name-primary">Manav</span> <span class="name-accent">Guha</span></h2>
+            <p class="about-role">Co-Founder</p>
+            <p class="about-bio">
+              Manabrata (Manav) Guha's background spans the nexus of war and technology, with a focus on autonomous systems, human-machine interaction, emergent technologically-enabled organizational forms and structures. His current work is on military innovation and emerging AI-enabled systems and their conceptual lineage. He contributes to strategic design and technology-systems architecture at <span class="name-primary">Machine</span> <span class="name-accent">Adjacent Systems</span>.
+            </p>
+            <a href="https://www.linkedin.com/in/simadologist/" target="_blank" rel="noopener" class="about-linkedin">LinkedIn →</a>
+          </article>
+
+          <!-- Rose -->
+          <article class="about-card">
+            <h2 class="about-name"><span class="name-primary">Rose</span> <span class="name-accent">Hasan</span></h2>
+            <p class="about-role">Co-Founder</p>
+            <p class="about-bio">
+              Rose Hasan brings engineering breadth and verification-oriented systems experience. Her background spans electrical engineering (including Digital Signal Processing, Artificial Neural Networks, and Cooperative Transmission Protocols) as well as professional work in credentialing and standards verification. She contributes to technical validation and strategic direction at <span class="name-primary">Machine</span> <span class="name-accent">Adjacent Systems</span>.
+            </p>
+            <a href="https://www.linkedin.com/in/rose-hasan-7a609977/" target="_blank" rel="noopener" class="about-linkedin">LinkedIn →</a>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
