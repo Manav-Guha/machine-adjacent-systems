@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact — Machine Adjacent Systems</title>
-  <meta name="description" content="Contact Machine Adjacent Systems for myCode access, MIAF demonstrations, partnership opportunities, or research collaboration.">
+  <meta name="description" content="Contact Machine Adjacent Systems for myCode access, demonstrations of our experimental work, partnership opportunities, or research collaboration.">
   <link rel="stylesheet" href="css/style.css">
   <style>
     .contact-email-block {
@@ -79,6 +79,17 @@
       display: block;
       margin-bottom: 0.25rem;
     }
+
+    /* Clickable nav title for "Our Thinking" section header */
+    .nav-title-link {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-title-link:hover {
+      color: var(--accent-red);
+    }
   </style>
 </head>
 <body>
@@ -100,23 +111,39 @@
         </a>
       </div>
 
-      <div class="nav-section-collapsible">
-        <div class="nav-section-header">
-          <h2 class="nav-title">Products</h2>
-          <span class="nav-collapse-icon">▼</span>
-        </div>
-        <div class="nav-submenu-container">
-          <ul class="nav-list">
-            <li class="nav-item"><a href="products/mycode.html" class="nav-link"><span class="name-primary">my</span><span class="name-accent">Code</span></a></li>
-            <li class="nav-item"><a href="products/miaf.html" class="nav-link"><span class="name-primary">M</span><span class="name-accent">IAF</span></a></li>
-          </ul>
-        </div>
+      <div class="nav-section">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="products/mycode.html" class="nav-link"><span class="name-primary">my</span><span class="name-accent">Code</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="experimental-work.html" class="nav-link">Adjacent <span class="name-accent">Experiments</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <h2 class="nav-title">
+          <a href="strategic-positions.html" class="nav-title-link">Our <span class="name-accent">Thinking</span></a>
+        </h2>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="abu-dhabi-connection.html" class="nav-link">The Abu Dhabi Connection</a>
+          </li>
+          <li class="nav-item">
+            <a href="verification-problem.html" class="nav-link">The Verification Problem</a>
+          </li>
+          <li class="nav-item">
+            <a href="analytical-frameworks.html" class="nav-link">Analytical Frameworks Explained</a>
+          </li>
+        </ul>
       </div>
 
       <div class="nav-section">
         <ul class="nav-list">
-          <li class="nav-item"><a href="strategic-positions.html" class="nav-link">Our <span class="name-accent">Thinking</span></a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link active">Contact</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -125,7 +152,7 @@
       <header class="hero">
         <h1 class="hero-title">Contact</h1>
         <p class="hero-description">
-          For inquiries about <span class="name-primary">my</span><span class="name-accent">Code</span>, <span class="name-primary">M</span><span class="name-accent">IAF</span>, partnership opportunities, or research collaboration, please email us.
+          For inquiries about <span class="name-primary">my</span><span class="name-accent">Code</span>, our experimental work, partnership opportunities, or research collaboration, please email us.
         </p>
       </header>
 
@@ -145,8 +172,8 @@
               Guided demonstrations, CI/CD integration discussions, validation partnerships
             </li>
             <li>
-              <strong><span class="name-primary">M</span><span class="name-accent">IAF</span> demonstrations and case study partnerships</strong>
-              Walkthroughs of the framework and tool, collaborative case study development
+              <strong>Adjacent experimental work (including <span class="name-primary">M</span><span class="name-accent">IAF</span>)</strong>
+              Walkthroughs of experimental projects and frameworks, collaborative case study development
             </li>
             <li>
               <strong>Academic collaboration</strong>
