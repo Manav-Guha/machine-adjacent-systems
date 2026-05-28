@@ -178,13 +178,13 @@
             <div class="explained-number">Analytical Frameworks Explained, #2</div>
             <h2 class="explained-title">Runtime Verification: What <span class="name-primary">my</span><span class="name-accent">Code</span> Actually Does</h2>
             <p class="explained-description">
-              AI-generated code arrives without runtime guarantees. The model that produced it had no obligation to verify that the code behaves as intended, handles edge cases, scales under load, or matches the developer's stated purpose.
+              AI-generated code arrives without runtime guarantees. The model that produced it had no obligation to verify that the code handles the user loads, data volumes, and usage patterns it will actually face in deployment — including conditions that exceed what anyone anticipated.
             </p>
             <p class="explained-description">
               <span class="name-primary">my</span><span class="name-accent">Code</span> runs the verification the model didn't.
             </p>
             <p class="explained-description">
-              Submit a repository. Declare what the code should do. <span class="name-primary">my</span><span class="name-accent">Code</span> executes operational tests against your stated intent. Where the tests fail, the diagnostic report shows where, when, and how. Where structural patterns in your code correspond to patterns from a corpus of 9,297 structured runtime-analysis reports over public repositories that historically encountered failure modes, the corpus model surfaces that correspondence.
+              Submit a repository. Describe your project and declare its operating envelope — the users, data, and usage patterns you expect. <span class="name-primary">my</span><span class="name-accent">Code</span> stress-tests your code beyond that envelope, finding where it degrades or fails as conditions exceed your assumptions. Where the tests fail, the diagnostic report shows where, when, and how. Where structural patterns in your code correspond to patterns from a corpus of 9,297 structured runtime-analysis reports over public repositories that historically encountered failure modes, the corpus model surfaces that correspondence.
             </p>
             <p class="explained-description">
               This is what we mean by verification: not a guess about what might happen, but observation of what does happen — under declared conditions, against a corpus of what has happened before.

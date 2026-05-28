@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>myCode — Runtime verification for AI-generated software | Machine Adjacent Systems</title>
-  <meta name="description" content="myCode runs operational tests against your stated intent. Outputs reflect what the runtime engine measured under declared conditions. Corpus-grounded from 9,297 (and growing) structured runtime-analysis reports over public repositories.">
+  <meta name="description" content="myCode stress-tests your code beyond the operating envelope you declare — expected users, data, and usage patterns — to find where it degrades or fails. Outputs reflect what the runtime engine measured under the conditions tested. Corpus-grounded from 9,297 (and growing) structured runtime-analysis reports over public repositories.">
   <link rel="stylesheet" href="../css/style.css">
   <style>
     /* Problem statement section — operational fracture lead */
@@ -294,9 +294,9 @@
         <!-- Row 1: What It Does (2 cols) + Get Started (col 3) -->
         <div class="content-box" style="grid-column: 1 / 3; grid-row: 1;">
           <h3>What It Does</h3>
-          <p><span class="name-primary">my</span><span class="name-accent">Code</span> runs operational tests against your stated intent. It surfaces structural correspondence between your code and patterns from a corpus of 9,297 (and growing) structured runtime-analysis reports over public repositories — where similar structures historically encountered failure modes.</p>
-          <p>Submit a repository, declare what it should do, and get a diagnostic report showing where structural risks appear and what the runtime tests actually reveal — before deployment.</p>
-          <p class="discipline-note">Findings reflect what the runtime engine measured under the conditions you declared. Observations, not predictions about untested scenarios.</p>
+          <p><span class="name-primary">my</span><span class="name-accent">Code</span> takes the operating envelope you declare — your expected user range, data types, data volumes, and usage patterns — and stress-tests your code beyond it, escalating across each dimension to find where it degrades, fails, or behaves unpredictably. The value lies in what emerges when real-world usage exceeds your assumptions. It also surfaces structural correspondence between your code and patterns from a corpus of 9,297 (and growing) structured runtime-analysis reports over public repositories — where similar structures historically encountered failure modes.</p>
+          <p>Submit a repository, describe your project and declare its expected operating envelope, and get a diagnostic report showing where structural risks appear and what the runtime tests actually reveal — before deployment.</p>
+          <p class="discipline-note">Findings reflect what the runtime engine measured under the conditions it tested — including stress conditions beyond your declared envelope. Observations, not predictions about untested scenarios.</p>
         </div>
 
         <div class="content-box tool-box" style="grid-column: 3; grid-row: 1;">
@@ -313,10 +313,10 @@
           <h3>How It Works</h3>
           <ol class="steps-list">
             <li>Provide your code — GitHub URL, zip upload, or local Python CLI</li>
-            <li>Declare intended behaviour</li>
+            <li>Describe your project and declare its operating envelope — users, data, usage patterns</li>
             <li>Dependencies installed in isolated sandbox</li>
             <li>Corpus model flags structural correspondence with historical failure patterns</li>
-            <li>Operational tests execute against stated intent</li>
+            <li>Operational stress tests escalate beyond the declared envelope</li>
             <li>Diagnostic report generated</li>
           </ol>
         </div>
@@ -341,7 +341,7 @@
                     allowfullscreen></iframe>
           </div>
           <div class="video-caption">
-            <strong><span class="name-primary">my</span><span class="name-accent">Code</span> in action.</strong> A short walkthrough: submit a repository, declare intent, observe the diagnostic report.
+            <strong><span class="name-primary">my</span><span class="name-accent">Code</span> in action.</strong> A short walkthrough: submit a repository, declare the operating envelope, observe the diagnostic report.
           </div>
         </div>
 
